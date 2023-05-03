@@ -1,2 +1,35 @@
-<h1>{{appTitle}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/age-verification.js"></script>
+  </head>
+<body onload="showPopup()">
+  <!-- Age verification popup -->
+  <div class="popup" id="age-verification-popup">
+    <div class="popup-content">
+      <h2>Age Verification</h2>
+      <p>Please enter your age to continue:</p>
+      <input type="number" id="age-input">
+      <button onclick="verifyAge()">Verify</button>
+    </div>
+  </div>
+    
+    <h1>Welcome to {{appTitle}}</h1>
+    
+    <div class="categories">
+      <a href="/summer-party-night">Summer Party Night</a>
+      <a href="/home-alone">Home Alone</a>
+      <a href="/me-and-some-friends-of-mine">Me & Some Friends of Mine</a>
+      <a href="/hot-girls-summer">Hot Girls Summer</a>
+    </div>
+    
+    <script>
+      function showPopup() {
+        document.querySelector('.popup').style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
