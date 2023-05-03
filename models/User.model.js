@@ -20,6 +20,19 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    age: {
+      type: Number,
+      required: true,
+      validate: {
+        validator: function (value) {
+          const currentDate = new Date();
+          const userBirthday = new Date(currentDate.getFullYear() - value, currentDate.getMonth(), currentDate.getDate());
+          const minAgeDate = new Date(currentDate.getFullYear() - 18, currentDate.getMonth(), currentDate.getDate());
+          return userBirthday <= minAgeDate;
+        },
+        message: "User must be at least 18 years old",
+      },
+    }
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
