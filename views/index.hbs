@@ -4,7 +4,9 @@
   <head>
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="/age-verification.js"></script>
+    <!-- <script src="/age-verification.js"></script>-->
+    <link rel="stylesheet" href="sweetalert2.min.css">
+  <script src="sweetalert2.all.min.js"></script>
   </head>
 <body onload="showPopup()">
   <!-- Age verification popup -->
@@ -27,9 +29,36 @@
     </div>
     
     <script>
-      function showPopup() {
-        document.querySelector('.popup').style.display = 'block';
+  window.onload = function() {
+    Swal.fire({
+      title: 'Age Verification',
+      text: 'Please enter your age to continue:',
+      input: 'number',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Verify',
+      showLoaderOnConfirm: true,
+      preConfirm: (age) => {
+        if (age >= 18) {
+          return true;
+        } else {
+          Swal.showValidationMessage('You need to be at least 18 years old to enter');
+        }
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Welcome!',
+          'You are now entering the website.',
+          'success'
+        );
       }
-    </script>
+    });
+  }
+</script>
+
   </body>
 </html>
