@@ -11,21 +11,22 @@ const saltRounds = 10;
 const User = require("../models/User.model");
 
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
-const isLoggedOut = require("../middleware/isLoggedOut");
-const isLoggedIn = require("../middleware/isLoggedIn");
+// const isLoggedOut = require("../middleware/isLoggedOut");
+// const isLoggedIn = require("../middleware/isLoggedIn");
 
 ////ROUTES////
 
 // GET /auth/signup WORKING
 //TODO Create the HBS views for the routes
-router.get("/signup", isLoggedOut, (req, res) => {
+//took out , isLoggedOut
+router.get("/signup", (req, res) => {
   res.render("auth/signup");
 });
 
 // POST /auth/signup WORKING
-router.post("/signup", isLoggedOut, async (req, res) => {
-  const { username, email, password } = req.body;
-  // console.log(username, email, password);
+//took out , isLoggedOut
+router.post("/signup", async (req, res) => {
+  const { username, email, password, age } = req.body;
   try {
     // Check that username, email, and password are provided
     if (username === "" || email === "" || password === "") {
@@ -66,7 +67,11 @@ router.post("/signup", isLoggedOut, async (req, res) => {
       email,
       username,
       password: hashedPassword,
+      age
     });
+
+    const userId = userFromDB._id;
+    console.log(userId);
 
     //redirect to the homepage or their profile?
     res.redirect("/");
@@ -85,25 +90,29 @@ router.post("/signup", isLoggedOut, async (req, res) => {
 });
 
 // GET /auth/login
-router.get("/login", isLoggedOut, (req, res) => {
+//took out , isLoggedOut
+router.get("/login", (req, res) => {
   res.render("auth/login");
 });
 
 // POST /auth/login
-//login in with email and password only?
-router.post("/login", isLoggedOut, async (req, res, next) => {
-  const { username, email, password } = req.body;
-
+//login in with email and password only
+router.post("/login", async (req, res, next) => {
+  const { email, password } = req.body;
   try {
     // Check that username, email, and password are provided
-    if (username === "" || email === "" || password === "") {
-      res.status(400).render("auth/login", {
-        errorMessage:
-          "All fields are mandatory. Please provide username, email and password.",
+    if (email === "" || password === "") {
+      res.render("auth/login", {
+        //Add if statement to views page to display message if needed
+        errorMessage: "Please enter both username and password to login",
       });
-
       return;
+    } else if (req.session.currentUser) {
+      res.render("auth/login", {
+        loggedIn: "You are already loged in",
+      });
     }
+
 
     // Here we use the same logic as above
     // - either length based parameters or we check the strength of a password
@@ -122,10 +131,10 @@ router.post("/login", isLoggedOut, async (req, res, next) => {
         .render("auth/login", { errorMessage: "Wrong credentials." });
       return;
     } else if (bcrypt.compareSync(password, user.password)) {
-      req.session.currentUser = user.toObject(); //.toObject from ironlauncher unsure if necessary
-      delete req.session.currentUser.password; //from ironlauncher, usure if necessary
+      req.session.currentUser = user; //.toObject from ironlauncher unsure if necessary
+      // delete req.session.currentUser.password; //from ironlauncher, usure if necessary
       res.redirect("/"); //redirect homepage or profile after login?
-    }
+    } 
   } catch (error) {
     next(error);
     console.log(error);
@@ -133,7 +142,8 @@ router.post("/login", isLoggedOut, async (req, res, next) => {
 });
 
 // GET /auth/logout
-router.get("/logout", isLoggedIn, (req, res) => {
+//took out , isLoggedIn
+router.get("/logout", (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       res.status(500).render("auth/logout", { errorMessage: err.message });
@@ -145,8 +155,9 @@ router.get("/logout", isLoggedIn, (req, res) => {
 });
 
 // GET /auth/profile/:id   WORKING
-//id is the req.session.currentUser.id
-router.get("/profile/:id", isLoggedOut, async (req, res, next) => {
-  res.send("user page");
+//id is the req.session.currentUser._id
+//took out , isLoggedOut
+router.get("/profile/:id", async (req, res, next) => {
+  res.render("auth/profile", {userInSession: req.session.currentUser._id});
 });
 module.exports = router;
