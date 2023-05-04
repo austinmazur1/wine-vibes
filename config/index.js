@@ -19,15 +19,15 @@ const path = require("path");
 
 // ℹ️ Session middleware for authentication
 // https://www.npmjs.com/package/express-session
-const session = require("express-session");
+// const session = require("express-session");
 
 // ℹ️ MongoStore in order to save the user session in the database
 // https://www.npmjs.com/package/connect-mongo
-const MongoStore = require("connect-mongo");
+// const MongoStore = require("connect-mongo");
 
 // Connects the mongo uri to maintain the same naming structure
-const MONGO_URI =
-  process.env.MONGO_DB_URI;
+// const MONGO_URI =
+//   process.env.MONGO_DB_URI;
 
 // Middleware configuration
 module.exports = (app) => {
@@ -50,16 +50,23 @@ module.exports = (app) => {
   app.use(
     favicon(path.join(__dirname, "..", "public", "images", "favicon.ico"))
   );
-
+  };
   // ℹ️ Middleware that adds a "req.session" information and later to check that you are who you say you are 😅
-  app.use(
-    session({
-      secret: process.env.SESSION_SECRET || "super hyper secret key",
-      resave: false,
-      saveUninitialized: false,
-      store: MongoStore.create({
-        mongoUrl: MONGO_URI,
-      }),
-    })
-  );
-};
+//   app.use(
+//     session({
+//         secret: process.env.SESSION_SECRET, //create var in .env file
+//         resave:true,
+//         saveUninitialized: false,
+//         cookie: {
+//             sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+//             secure: process.env.NODE_ENV === 'production',
+//             httpOnly: true,
+//             maxAge: 60000 //1 min 
+//         },
+//         store: MongoStore.create({
+//             mongoUrl: process.env.MONGO_DB_URI,
+//             ttl: 60 * 60 * 24, // 1 day
+//         })
+//     })
+// )
+// };
