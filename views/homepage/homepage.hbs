@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Iron Wine Project</title>
+  </head>
+  <body>
+    <nav>
+    <ul>
+  {{#each products}}
+    <li>
+      <h2>{{this.product_name}}</h2>
+      <p>Vibe: {{this.product_vibe}}</p>
+      <p>Price: {{this.product_price}}</p>
+    </li>
+  {{/each}}
+</ul>
+    
+    <h1>Welcome to Iron Wine Project!</h1>
+    
+    <p>Here are some of our featured products:</p>
+    
+    <ul>
+      {{#each products}}
+        <li>
+          <h2>{{this.product_name}}</h2>
+          <p>Vibe: {{this.product_vibe}}</p>
+          <p>Price: {{this.product_price}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  </body>
+</html>

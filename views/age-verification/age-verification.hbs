@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Age Verification</title>
+  </head>
+  <body>
+    {{#if over18}}
+      <h1>Welcome to the Homepage!</h1>
+      <!-- Add homepage content here -->
+    {{else}}
+      <h1>Are you over 18 years old?</h1>
+      <form method="post" action="/verify-age">
+        <label>
+          <input type="radio" name="age" value="yes"> Yes
+        </label>
+        <label>
+          <input type="radio" name="age" value="no"> No
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    {{/if}}
+  </body>
+</html>

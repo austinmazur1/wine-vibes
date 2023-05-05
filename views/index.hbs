@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="/age-verification.js"></script>-->
+    <link rel="stylesheet" href="sweetalert2.min.css">
+  <script src="sweetalert2.all.min.js"></script>
+  </head>
+<body onload="showPopup()">
+  <!-- Age verification popup -->
+  <div class="popup" id="age-verification-popup">
+    <div class="popup-content">
+      <h2>Age Verification</h2>
+      <p>Please enter your age to continue:</p>
+      <input type="number" id="age-input">
+      <button onclick="verifyAge()">Verify</button>
+    </div>
+  </div>
+    
+    <h1>Welcome to {{appTitle}}</h1>
+    
+    <div class="categories">
+      <a href="/summer-party-night">Summer Party Night</a>
+      <a href="/home-alone">Home Alone</a>
+      <a href="/me-and-some-friends-of-mine">Me & Some Friends of Mine</a>
+      <a href="/hot-girls-summer">Hot Girls Summer</a>
+    </div>
+    
+    <script>
+  window.onload = function() {
+    Swal.fire({
+      title: 'Age Verification',
+      text: 'Please enter your age to continue:',
+      input: 'number',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Verify',
+      showLoaderOnConfirm: true,
+      preConfirm: (age) => {
+        if (age >= 18) {
+          return true;
+        } else {
+          Swal.showValidationMessage('You need to be at least 18 years old to enter');
+        }
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Welcome!',
+          'You are now entering the website.',
+          'success'
+        );
+      }
+    });
+  }
+</script>
+
+  </body>
+</html>
