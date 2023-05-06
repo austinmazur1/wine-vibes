@@ -6,6 +6,8 @@ const Cart = require("../models/cart.model");
 const User = require("../models/User.model");
 const Product = require("../models/Wine.model"); 
 
+
+
 //Render the cart
 router.get('/:id', async (req, res, next) => {
 
@@ -41,11 +43,8 @@ router.post('/:id', async (req, res, next) => {
     //just add to the quantity
 })
 
-//check out route, id of the user
-router.get('/checkout/:id', async(req,res,next) => {
-// checkout route, get user.session.id to find the cart
 
-
-})
+//Stripe checkout is in checkout.routes
+//dom manipulation is in public/js/script.js
 
 module.exports = router;
