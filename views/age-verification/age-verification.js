@@ -10,3 +10,6 @@ function verifyAge() {
       document.body.style.overflow = "hidden";
     }
   }
+
+  // After clicking yes to the popup, I am brought to
+  //local host 3000/verify-age 
