@@ -18,3 +18,6 @@ router.post('/verify-age', (req, res) => {
 });
 
 module.exports = router;
+
+//IDEA I think if we change 'verify-age' to just '/' here and in the form on age-verify.hbs file we will get re-directed 
+//to the main page rather than a "verify-age" route
