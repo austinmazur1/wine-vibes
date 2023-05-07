@@ -1,0 +1,122 @@
+[{
+  "_id": {
+    "$oid": "644fbcf26286460396afa658"
+  },
+  "product_image":"https://photos.google.com/photo/AF1QipOsDSe7vRmUxVExdCWAIbA4vdhmn9_L7-eipHGF",
+  "product_vibe": "summer party night",
+  "product_name": "O Baby Baby Scheurebe",
+  "product_price": "7,50€",
+  "bottle_size": "0.75 l",
+  "closure": "Screw cap",
+  "quality_level": "German quality wine",
+  "origin": "Franken (DE)",
+  "alcohol_content": "12 % vol",
+  "residual_sugar": "3 g/l",
+  "acidity": "6.6 g/l",
+  "recommended_serving_temperature": "10-12 °C",
+  "fermentation": "Spontaneous fermentation",
+  "maturation": "Stainless steel tank",
+  "contains_sulfites": true,
+  "description": "Aromas of mandarin and black currant. With its crisp acidity and fine spices, our Scheurebe really gets going in the mouth and presents a long finish! - 'Baby, Baby don't be shy', the name shows how it goes...",
+  "pairs_with": [
+    "Asian cuisine",
+    "Fish and seafood",
+    "Poultry"
+  ],
+  "producer": {
+    "name": "Winzerhof Ottenbreit",
+    "location": "Franken, Germany"
+  }
+},{
+  "_id": {
+    "$oid": "644fbcf26286460396afa659"
+  },
+  "product_image":"https://photos.google.com/photo/AF1QipOEn3TyZ__VEYXUmrHlRcIEmTVLLRIuj73pqv9s",
+  "product_vibe": "home alone",
+  "product_name": "O what a day Cuvée",
+  "product_price": "7,50€",
+  "grape_varieties": [
+    "Scheurebe",
+    "Sauvignon Blanc",
+    "Kerner"
+  ],
+  "bottle_size": "0.75 l",
+  "closure": "Screw cap",
+  "quality_level": "German quality wine",
+  "origin": "Franken (DE)",
+  "alcohol_content": "11.5 % vol",
+  "residual_sugar": "11 g/l",
+  "acidity": "6.4 g/l",
+  "recommended_serving_temperature": "10-12 °C",
+  "fermentation": "Stainless steel tank",
+  "maturation": "Stainless steel tank",
+  "contains_sulfites": true,
+  "description": "Our Cuvée is like a good mixtape, you can always put it on. A wine with fine exoticism! Subtle grapefruit and peach aromas with a hint of orange peel. Light spice and wonderfully playful. A wine that always works, alone or with friends, for a cozy dinner and beyond...",
+  "pairs_with": [
+    "Vegetarian dishes",
+    "Asian cuisine",
+    "Fish and seafood"
+  ],
+  "producer": {
+    "name": "Winzerhof Ottenbreit",
+    "location": "Paradeis 16, 97342 Obernbreit, Franken, Germany"
+  }
+},{
+  "_id": {
+    "$oid": "644fbcf26286460396afa65a"
+  },
+  "product_image":"https://photos.google.com/photo/AF1QipOsDSe7vRmUxVExdCWAIbA4vdhmn9_L7-eipHGF",
+  "product_vibe": "me&some friends of mine",
+  "product_name": "O Lah Laaaah Sauvignon blanc",
+  "product_price": "8.00€",
+  "product_details": {
+    "grape_variety": "Sauvignon Blanc",
+    "bottle_size": "0.75 l",
+    "closure": "screw cap",
+    "quality_level": "German quality wine",
+    "origin": "Franken (DE)",
+    "alcohol_content": "12% vol",
+    "residual_sugar": "3 g/l",
+    "acidity": "6.5 g/l",
+    "recommended_drinking_temperature": "10-12 °C",
+    "fermentation": "spontaneous fermentation",
+    "maturation": "stainless steel tank",
+    "contains_sulfites": true
+  },
+  "tasting_notes": "This Sauvignon Blanc is perfect for a summer party night. It has a crisp and refreshing taste with notes of tropical fruit and a hint of grass. It pairs well with Asian cuisine, fish and seafood, and poultry.",
+  "producer_information": {
+    "name": "Winzerhof Ottenbreit",
+    "location": "Paradeis 16, 97342 Obernbreit, Germany"
+  }
+},{
+  "_id": {
+    "$oid": "644fbcf26286460396afa65b"
+  },
+  "product_image":"https://photos.google.com/photo/AF1QipPnaRp4zItlYBza0U_6RVaMFZ25u3kkc1RoPrjv",
+  "product_vibe": "hot girls summer",
+  "product_name": "Princess Cuvée Rosé",
+  "product_price": "7,50€",
+  "product_description": "The winemaker says:this wineis a gift to my wife, my very own princess! Red fruits, delicate mint and a hint of vanilla on the nose. Juicy on the palate, inviting with a fine melt. Perfect wine for summer moments, even in winter.",
+  "grape_varieties": [],
+  "bottle_size": "0,75 l",
+  "closure": "screw cap",
+  "quality_level": "Deutscher Qualitätswein",
+  "origin": "Franken (DE)",
+  "alcohol_content": "12 % vol",
+  "residual_sugar": "12 g/l",
+  "acidity": "6,4 g/l",
+  "recommended_temperature": "10 - 12 °C",
+  "fermentation": "Stainless steel tank",
+  "maturation": "Stainless steel tank",
+  "contains_sulfites": true,
+  "taste_profile": [
+    "Vegetarian",
+    "Asian cuisine",
+    "Fish & seafood"
+  ],
+  "producer": {
+    "name": "Winzerhof Ottenbreit",
+    "location": "Deutschland / Franken",
+    "address": "Paradeis 16, 97342 Obernbreit"
+  }
+}]
