@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
 });
 
 // Handle form submission to check age and redirect to homepage if user is over 18
-router.post('/verify-age', (req, res) => {
+router.post('/', (req, res) => {
   const age = req.body.age;
   if (age === 'yes') {
     res.render('homepage/homepage.hbs', { title: 'Homepage' });

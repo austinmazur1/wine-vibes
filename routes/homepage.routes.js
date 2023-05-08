@@ -1,29 +1,19 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Wine = require('../models/Wine.model');
-
+const Wine = require("../models/Wine.model");
+const { vibeArrays } = require("../utils/vibes");
 
 //Got products from db, did a loop to send the vibes to the homepage
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    
-    const product = await Wine.find();
+    //calls imported function that retrieves seperated vibe arrays
+    const vibes = await vibeArrays();
 
-    let vibes = []
-    product.forEach((product) => {
-      if(product.product_vibe && !vibes.includes(product.product_vibe)) {
-        vibes.push(product.product_vibe);
-      }
-    })
-    console.log(vibes);
-    
-    res.render('homepage/homepage', { product, vibes });
+    res.render("homepage/homepage", { vibes: vibes.productVibes });
   } catch (err) {
     console.log(err);
-    res.status(500).send('Error retrieving wines');
+    res.status(500).send("Error retrieving wines");
   }
 });
 
 module.exports = router;
-
-
