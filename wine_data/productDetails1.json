@@ -381,6 +381,136 @@
       "name": "Mesquida Mora",
       "location": "Mallorca, Spain"
     }
+  },
+  {
+    "_id": {
+      "$oid": ""
+    },
+    "product_image":"https://i.ibb.co/C0XQsYy/von-Winning-Riesling-Win-Win-2021.png",
+    "product_vibe": "summer party night",
+    "product_name": "von Winning Riesling Win Win 2021",
+    "product_price": "11.5€",
+    "vintage": "2021",
+    "grape_variety": "Riesling",
+    "bottle_size": "0.75 l",
+    "closure": "Screw cap",
+    "quality_level": "German quality wine",
+    "origin": "Pfalz",
+    "alcohol_content": "12% vol",
+    "residual_sugar": "6.5 g/l",
+    "acidity": "6.5 g/l",
+    "recommended_serving_temperature": "10-12 °C",
+    "fermentation": "Spontaneous fermentation",
+    "maturation": "Stainless steel",
+    "contains_sulfites": true,
+    "description": "White peach, Granny Smith, gooseberry, kiwi. Juicy, fresh, creamy, drinkable, almost quaffable, but also totally clear and precise. The wine has an elegant fruit pressure, typical of the Pfalz, which fits wonderfully.",
+    "pairs_with": [
+      "Fruity salads",
+      "Spicy dishes",
+      "Grilled fish & seafood"
+    ],
+    "producer": {
+      "name": "von Winning",
+      "location": "Pfalz, Germany"
+    }
+  },
+  {
+    "_id": {
+      "$oid": ""
+    },
+    "product_image":"https://i.ibb.co/hcmBMW6/Marangona-Lugana-Marangona-2022.png",
+    "product_vibe": "summer party night",
+    "product_name": "Marangona: Lugana Marangona 2022",
+    "product_price": "12.9€",
+    "vintage": "2022",
+    "grape_variety": "Trebbiano",
+    "bottle_size": "0.75 l",
+    "closure": "Screw cap",
+    "quality_level": "Italian quality wine",
+    "origin": "Lombardy",
+    "alcohol_content": "12.5% vol",
+    "residual_sugar": "4.5 g/l",
+    "acidity": "3.5 g/l",
+    "recommended_serving_temperature": "10-12 °C",
+    "fermentation": "Spontaneous fermentation",
+    "maturation": "Stainless steel",
+    "contains_sulfites": true,
+    "description": "Lugana Marangona 2022 is a white wine from Lombardy, Italy. It is made from 100% Turbiana grapes and has a straw-yellow color. On the palate, it is fresh and crisp with notes of citrus, white flowers, and a hint of minerality. It has a balanced acidity and a pleasant finish.",
+    "pairs_with": [
+      "Summer salads",
+      "Vegetarian",
+      "Grilled fish & seafood"
+    ],
+    "producer": {
+      "name": "Marangona",
+      "location": "Lombardy, Italy"
+    }
+  },
+  
+  
+  {
+    "_id": {
+      "$oid": ""
+    },
+  "product_image":"https://i.ibb.co/WVwYYS3/Bodegas-Telmo-Rodriguez-Ladeiras-Do-Xil-Galicien-Gaba-do-Xil-O-Barreiro-Godello-2021.png",
+    "product_vibe": "summer party night",
+    "product_name": "Bodegas Telmo Rodriguez Ladeiras Do Xil: Galicien Gaba do Xil O Barreiro Godello 2021",
+    "product_price": "13,5€",
+    "vintage": "2021",
+    "grape_variety": "Godello",
+    "bottle_size": "0.75 l",
+    "closure": "cork",
+    "quality_level": "spanish quality wine ",
+    "origin": "Valdeorras",
+    "alcohol_content": "12,5 % vol",
+    "residual_sugar": "2,5 g/l",
+    "acidity": "4.5 g/l",
+    "recommended_serving_temperature": "10-12 °C",
+    "fermentation": "Spontaneous fermentation",
+    "maturation": "on the lees",
+    "contains_sulfites": true,
+    "description": " It has a very delicate, white floral nose that is typical of Godello. There is a lovely sweetness of jasmine and lilac flowers that is very playful.Behind the flowers, there are also hints of lemongrass, lime, and reddish kumquat. On the palate, it shows surprising intensity. Lovely white pepper chili heat runs across the tongue, with salt on the edges. It has a good length but with an extremely charming character.",
+    "pairs_with": [
+             "Seafood paella",
+             "Ceviche",
+             "Creamy pasta"
+  ],
+    "producer": {
+      "name": "Bodegas Telmo Rodriguez",
+      "location": "Valdeorras, Spain"
+    }
+  }, 
+  {
+    "_id": {
+      "$oid": ""
+    },
+  "product_image":"https://i.ibb.co/r0WWnwb/Bouvet-Ladubay-Cremant-de-Loire-Vintage-Brut-2020.png",
+    "product_vibe": "summer party night",
+    "product_name": "Bouvet Ladubay: Cremant de Loire Vintage Brut 2020",
+    "product_price": "12,95€",
+    "vintage": "2020",
+    "grape_variety": "Chardonnay",
+    "bottle_size": "0.75 l",
+    "closure": "muselet",
+    "quality_level": "cremant ",
+    "origin": "Saumur",
+    "alcohol_content": "12,5 % vol",
+    "residual_sugar": "3,5 g/l",
+    "acidity": "3.5 g/l",
+    "recommended_serving_temperature": "8-10 °C",
+    "fermentation": "méthode traditionnelle",
+    "maturation": "on the lees ",
+    "contains_sulfites": true,
+    "description": "On the nose, it has aromas of citrus and green apple, while on the palate it is crisp and refreshing with flavors of pear and a hint of brioche. It has a fine, persistent mousse and a clean finish. .",
+    "pairs_with": [
+             "Light appetizers",
+             "Poultry",
+             "Grilled fish & seafood"
+  ],
+    "producer": {
+      "name": "Bouvet Ladubay",
+      "location": "Saumer, Loire, France"
+    }
   }
   
 ]
