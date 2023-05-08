@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 //Working test
-//maybe move back to the cart route,
+//IDEA maybe move back to the cart route,
 //store items will be from the db
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
