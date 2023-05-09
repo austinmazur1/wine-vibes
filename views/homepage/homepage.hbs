@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Iron Wine Project</title>
-  </head>
-  <body>
+
     <nav>
-    <ul>
+      <a href="/auth/login">Login</a>
+      <a href="/auth/signup">Signup</a>
+      {{#if userInSession}}
+      <a href="/auth/profile/{{userInSession._id}}">Profile</a>
+      <a href="/auth/logout">logout</a>
+      {{/if}}
   {{!-- {{#each products}}
     <li>
       <h2>{{this.product_name}}</h2>
@@ -14,7 +13,7 @@
       <p>Price: {{this.product_price}}</p>
     </li>
   {{/each}} --}}
-</ul>
+</nav>
     
     <h1>Welcome to Iron Wine Project!</h1>
     
@@ -24,14 +23,10 @@
     <ul>
       {{#each vibes}}
         <li>
-          {{!-- <h2>{{this.product_name}}</h2> --}}
           <p>{{this}}</p>
-          {{!-- <p>Price: {{this.product_price}}</p> --}}
-          {{!-- <p><img src="{{this.product_image}}" alt="{{this.product_name}}"></p> --}}
         </li>
       {{/each}}
     </ul>
-  </body>
-</html>
+ 
 
 {{!-- Tweaked this a bit, now just displaying the 4 vibes we have --}}

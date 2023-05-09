@@ -1,5 +1,6 @@
 <h1>Profile</h1>
 
 {{#if userInSession}}
-<h2>{{this}}</h2>
+<p>{{userInSession.username}}</p>
+<a href="/cart/{{userInSession._id}}">Cart</a>
 {{/if}}

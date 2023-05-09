@@ -74,7 +74,7 @@ router.post("/signup", async (req, res) => {
     console.log(userId);
 
     //redirect to the homepage or their profile?
-    res.redirect("/");
+    res.redirect("/home");
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       res.status(500).render("auth/signup", { errorMessage: error.message });
@@ -133,7 +133,7 @@ router.post("/login", async (req, res, next) => {
     } else if (bcrypt.compareSync(password, user.password)) {
       req.session.currentUser = user; //.toObject from ironlauncher unsure if necessary
       // delete req.session.currentUser.password; //from ironlauncher, usure if necessary
-      res.redirect("/"); //redirect homepage or profile after login?
+      res.redirect("/home"); //redirect homepage or profile after login?
     } 
   } catch (error) {
     next(error);
@@ -150,7 +150,7 @@ router.get("/logout", (req, res) => {
       return;
     }
     //redirected to homepage after logout
-    res.redirect("/");
+    res.redirect("/home");
   });
 });
 
@@ -158,6 +158,6 @@ router.get("/logout", (req, res) => {
 //id is the req.session.currentUser._id
 //took out , isLoggedOut
 router.get("/profile/:id", async (req, res, next) => {
-  res.render("auth/profile", {userInSession: req.session.currentUser._id});
+  res.render("auth/profile", {userInSession: req.session.currentUser});
 });
 module.exports = router;

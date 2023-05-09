@@ -26,8 +26,8 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
 //TODO merge dupliacte homepages
-const indexRoutes = require("./routes/index.routes"); //Hompage
-app.use("/", indexRoutes);
+const ageVerify = require("./routes/age-verifiy.routes"); //Hompage
+app.use("/", ageVerify);
 
 const cartRoutes = require("./routes/cart.routes");
 app.use("/cart", cartRoutes);
