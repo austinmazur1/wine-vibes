@@ -4,23 +4,23 @@ async function vibeArrays() {
   const product = await Wine.find();
 
   const productVibes = [
-    "summer party night",
-    "home alone",
-    "me&some friends of mine",
-    "hot girls summer",
+    "Summer Party Night",
+    "Home Alone",
+    "Me & Some Friends of Mine",
+    "Hot Girls Summer",
   ];
 
   const summerParty = product.filter(
-    (item) => item.product_vibe === "summer party night"
+    (item) => item.product_vibe === "Summer Party Night"
   );
   const homeAlone = product.filter(
-    (item) => item.product_vibe === "home alone"
+    (item) => item.product_vibe === "Home Alone"
   );
   const meAndSomeFriends = product.filter(
-    (item) => item.product_vibe === "me&some friends of mine"
+    (item) => item.product_vibe === "Me & Some Friends of Mine"
   );
   const hotGirlSummer = product.filter(
-    (item) => item.product_vibe === "hot girls summer"
+    (item) => item.product_vibe === "Hot Girls Summer"
   );
 
   return {
