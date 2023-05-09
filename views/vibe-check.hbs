@@ -1,0 +1,85 @@
+<form id="form" action="#" method="post">
+      <h1>Let us help!</h1>
+      <!-- create a tab for each step in the form -->
+      <div class="tab1">
+        Drinking with someone?
+        <p>
+          <input
+            type="radio"
+            id="alone"
+            name="aloneOrNo"
+            value="alone"
+            checked
+          />
+          <label for="alone">Alone</label>
+        </p>
+        <p>
+          <input
+            type="radio"
+            id="friends"
+            name="aloneOrNo"
+            value="friends"
+          />
+          <label for="friends">With Friends</label>
+        </p>
+      </div>
+      <div class="tab2">
+        Whats the setting?
+        <p>
+          <input
+            type="radio"
+            id="home"
+            name="homeOrParty"
+            value="home"
+            checked
+          />
+          <label for="home">Home</label>
+        </p>
+        <p>
+          <input
+            type="radio"
+            id="party"
+            name="homeOrParty"
+            value="party"
+          />
+          <label for="party">Party</label>
+        </p>
+      </div>
+      <div class="tab3">
+        Prefered type?
+        <p>
+          <input
+            type="radio"
+            id="red"
+            name="redOrWhite"
+            value="red"
+            checked
+          />
+          <label for="red">Red</label>
+        </p>
+        <p>
+          <input
+            type="radio"
+            id="white"
+            name="redOrWhite"
+            value="white"
+          />
+          <label for="white">White</label>
+        </p>
+      </div>
+
+      <div style="overflow: auto">
+        <div style="float: right">
+          <button type="button" id="prevBtn">
+            Previous
+          </button>
+          <button type="button" id="nextBtn">Next</button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>

@@ -16,4 +16,8 @@ router.get("/home", async (req, res) => {
   }
 });
 
+router.get("/vibe-check", async (req, res, next) => {
+  res.render("vibe-check");
+})
+
 module.exports = router;
