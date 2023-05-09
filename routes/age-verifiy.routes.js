@@ -7,10 +7,10 @@ router.get('/', (req, res) => {
 });
 
 // Handle form submission to check age and redirect to homepage if user is over 18
-router.post('/', (req, res) => {
+router.post('/home', (req, res) => {
   const age = req.body.age;
   if (age === 'yes') {
-    res.render('homepage/homepage.hbs', { title: 'Homepage' });
+    res.redirect("/home")
   } else {
     // If user is not old enough, show the age verification view again with an error message
     res.render('age-verification/age-verification', { over18: false, error: 'You must be at least 18 years old to access this site.' });
@@ -18,6 +18,3 @@ router.post('/', (req, res) => {
 });
 
 module.exports = router;
-
-//IDEA I think if we change 'verify-age' to just '/' here and in the form on age-verify.hbs file we will get re-directed 
-//to the main page rather than a "verify-age" route
