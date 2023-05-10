@@ -10,10 +10,10 @@
 </nav>
 
     
-<h1>Products in {{vibe}} category:</h1>
+<h1>Products in {{vibe.product_vibe}} category:</h1>
     
 <ul>
-  {{#each wine}}
+  {{#each vibe}}
     <li>
       <h2>{{this.product_name}}</h2>
       <p>Vibe: {{this.product_vibe}}</p>
