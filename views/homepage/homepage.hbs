@@ -21,14 +21,20 @@
     <p>Here are some of our featured products:</p>
     
       Choose your Vibe
-    <ul>
       {{#each vibes}}
-        <li>
-         {{!-- <p>{{this}}</p> firts version--}} 
-          <a href="/vibes/{{this}}">{{this}}</a>
-        </li>
+ features/product-update-2
+      {{#if (eq @index 0)}}
+          <p><a href="/summer-party">{{this}}</a></p>
+      {{else if (eq @ index 1)}}
+          <p><a href="/home-alone">{{this}}</a></p>
+      {{else if (eq @index 2)}}    
+          <p><a href="/me-and-friends">{{this}}</a></p>
+      {{else if (eq @index 3)}}    
+          <p><a href="/hot-girl-summer">{{this}}</a></p>
+      
+      {{/if}}
       {{/each}}
-    </ul>
+
  
 
 {{!-- Tweaked this a bit, now just displaying the 4 vibes we have --}}
