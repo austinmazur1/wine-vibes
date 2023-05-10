@@ -22,14 +22,14 @@
     
       Choose your Vibe
       {{#each vibes}}
- features/product-update-2
-      {{#if (eq @index 0)}}
+ 
+      {{#if (eq @ index 0)}}
           <p><a href="/summer-party">{{this}}</a></p>
       {{else if (eq @ index 1)}}
           <p><a href="/home-alone">{{this}}</a></p>
-      {{else if (eq @index 2)}}    
+      {{else if (eq @ index 2)}}    
           <p><a href="/me-and-friends">{{this}}</a></p>
-      {{else if (eq @index 3)}}    
+      {{else if (eq @ index 3)}}    
           <p><a href="/hot-girl-summer">{{this}}</a></p>
       
       {{/if}}
