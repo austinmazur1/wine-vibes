@@ -39,23 +39,25 @@ router.get("/vibe-check", async (req, res, next) => {
 
 router.get("/summer-party", async (req, res, next) => {
   const vibes = await vibeArrays();
+  // console.log(vibes);
     const summerVibe = vibes.summerParty;
-  res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
+console.log(summerVibe)
+    res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
 })
 
 
 //wine vibes rout
-router.get('/vibes/:vibe', (req, res, next) => {
-  const vibe = req.params.vibe;
-  Wine.find({ product_vibe: vibe })
-    .then((wine) => {
-      console.log(wine);
-      res.render('products/products', { wine, vibe });
-    })
-    .catch((err) => {
-      console.error("Error retrieving products: ", err);
-      next(err);
-    });
-})
+// router.get('/vibes/:vibe', (req, res, next) => {
+//   const vibe = req.params.vibe;
+//   Wine.find({ product_vibe: vibe })
+//     .then((wine) => {
+//       console.log(wine);
+//       res.render('products/products', { wine, vibe });
+//     })
+//     .catch((err) => {
+//       console.error("Error retrieving products: ", err);
+//       next(err);
+//     });
+// })
 
 module.exports = router;
