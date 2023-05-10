@@ -43,4 +43,19 @@ router.get("/summer-party", async (req, res, next) => {
   res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
 })
 
+
+//wine vibes rout
+router.get('/vibes/:vibe', (req, res, next) => {
+  const vibe = req.params.vibe;
+  Wine.find({ product_vibe: vibe })
+    .then((wine) => {
+      console.log(wine);
+      res.render('products/products', { wine, vibe });
+    })
+    .catch((err) => {
+      console.error("Error retrieving products: ", err);
+      next(err);
+    });
+})
+
 module.exports = router;
