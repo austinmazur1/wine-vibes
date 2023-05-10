@@ -6,8 +6,8 @@ const { vibeArrays } = require("../utils/vibes");
 //Got products from db, did a loop to send the vibes to the homepage
 router.get("/home", async (req, res) => {
   try {
-    const vibe = await Wine.findById("645925bcf60fd15208521c37");
-    console.log(vibe.product_vibe.vibe_id);
+    const vibe = await Wine.find();
+   
 
     
     // console.log(vibe.product_vibe);
@@ -15,7 +15,7 @@ router.get("/home", async (req, res) => {
     const vibes = await vibeArrays();
     // console.log(vibes.productVibes);
     const summerVibe = vibes.summerParty;
-    const home = vibes.homeAlone;
+    const home = vibes.homeAlone;    
     const meAndFriends = vibes.meAndSomeFriends;
     const hotGirlSum = vibes.hotGirlSummer;
 
@@ -41,10 +41,27 @@ router.get("/summer-party", async (req, res, next) => {
   const vibes = await vibeArrays();
   // console.log(vibes);
     const summerVibe = vibes.summerParty;
-console.log(summerVibe)
+   //console.log(summerVibe)
     res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
 })
+router.get("/home-alone", async (req, res, next) => {
+  const vibes = await vibeArrays();   
+  const homeAlone = vibes.homeAlone;  
+  res.render("products/products", {userInSession: req.session.currentUser, vibe: homeAlone})
+})
 
+router.get("/me-and-friends", async (req, res, next) => {
+  const vibes = await vibeArrays();   
+    const meAndFriends = vibes.meAndFriends;
+    //console.log(homeAlone)
+    res.render("products/products", {userInSession: req.session.currentUser, vibe: meAndFriends})
+})
+router.get("/hot-girl-summer", async (req, res, next) => {
+  const vibes = await vibeArrays();   
+    const hotGirlSum = vibes.hotGirlSum;
+    //console.log(homeAlone)
+    res.render("products/products", {userInSession: req.session.currentUser, vibe: hotGirlSum})
+})
 
 //wine vibes rout
 // router.get('/vibes/:vibe', (req, res, next) => {
