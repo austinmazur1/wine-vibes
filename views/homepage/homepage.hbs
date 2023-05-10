@@ -24,7 +24,8 @@
     <ul>
       {{#each vibes}}
         <li>
-          <p>{{this}}</p>
+         {{!-- <p>{{this}}</p> firts version--}} 
+          <a href="/vibes/{{this}}">{{this}}</a>
         </li>
       {{/each}}
     </ul>
