@@ -20,4 +20,19 @@ router.get("/vibe-check", async (req, res, next) => {
   res.render("vibe-check");
 })
 
+
+//wine vibes rout
+router.get('/vibes/:vibe', (req, res, next) => {
+  const vibe = req.params.vibe;
+  Wine.find({ product_vibe: vibe })
+    .then((wine) => {
+      console.log(wine);
+      res.render('products/products', { wine, vibe });
+    })
+    .catch((err) => {
+      console.error("Error retrieving products: ", err);
+      next(err);
+    });
+})
+
 module.exports = router;

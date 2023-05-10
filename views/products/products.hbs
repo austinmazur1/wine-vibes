@@ -1,0 +1,22 @@
+<nav>
+  <a href="/auth/login">Login</a>
+  <a href="/auth/signup">Signup</a>
+  <a href="/vibe-check">Vibe Check</a>
+  {{#if userInSession}}
+  <a href="/auth/profile/{{userInSession._id}}">Profile</a>
+  <a href="/auth/logout">logout</a>
+  {{/if}}
+</nav>
+
+    
+<h1>Products in {{vibe}} category:</h1>
+    
+<ul>
+  {{#each wine}}
+    <li>
+      <h2>{{this.product_name}}</h2>
+      <p>Vibe: {{this.product_vibe}}</p>
+      <p>Price: {{this.product_price}}</p>
+    </li>
+  {{/each}}
+</ul>

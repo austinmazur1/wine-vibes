@@ -1,5 +1,5 @@
 // MULTI-STEP-FORM //
-let tab1 = document.querySelector(".tab1");
+/*let tab1 = document.querySelector(".tab1");
 let tab2 = document.querySelector(".tab2");
 let tab3 = document.querySelector(".tab3");
 let input = document.querySelectorAll("input");
@@ -65,4 +65,42 @@ function showTab(num) {
     default:
       break;
   }
-}
+}*/
+document.getElementById("nextBtn").addEventListener("click", function() {
+  var aloneOrNo = document.querySelector('input[name="aloneOrNo"]:checked').value;
+  var setting = document.querySelector('input[name="setting"]:checked').value;
+  var preferedWine = document.querySelector('input[name="preferedWine"]:checked').value;
+  
+  var vibeCategory = "";
+  if (aloneOrNo === "alone" && setting === "vibing"&& preferedWine ==="impressSnob" ) {
+    vibeCategory = "home alone";
+  } else if (aloneOrNo === "friends" && setting === "rocking"&& preferedWine ==="goodWine") {
+    vibeCategory = "me&some friends of mine";
+  } else if (aloneOrNo === "girls" && setting === "rocking"&& preferedWine ==="easyDrinking") {
+    vibeCategory = "hot girls summer";
+  } else if (aloneOrNo === "not-sure" && setting === "rocking"&& preferedWine ==="impressSnob") {
+    vibeCategory = "me&some friends of mine";
+  } else if (aloneOrNo === "alone" && setting === "spontaneous"&& preferedWine ==="impressSnob") {
+    vibeCategory = "home alone";
+  } else if (aloneOrNo === "friends" && setting === "spontaneous"&& preferedWine ==="easyDrinking") {
+    vibeCategory = "summer party night";
+  } else if (aloneOrNo === "girls" && setting === "vibing"&& preferedWine ==="goodWine") {
+    vibeCategory = "me&some friends of mine";
+  } else if (aloneOrNo === "not-sure" && setting === "spontaneous"&& preferedWine ==="goodWine") {
+    vibeCategory = "me&some friends of mine";
+  } else if (aloneOrNo === "girls" && setting === "spontaneous"&& preferedWine ==="easyDrinking") {
+    vibeCategory = "hot girls summer";
+  } else if (aloneOrNo === "friends" && setting === "vibing"&& preferedWine ==="impressSnob") {
+    vibeCategory = "me&some friends of mine";
+  } else if (aloneOrNo === "girls" && setting === "rocking"&& preferedWine ==="girlyDrops") {
+    vibeCategory = "hot girls summer";
+  } else if (aloneOrNo === "not-sure" && setting === "vibing"&& preferedWine ==="impressSnob") {
+    vibeCategory = "me&some friends of mine";
+  } else {
+    vibeCategory = "summer party night";
+  }
+  
+  window.location.href = "/vibes/" + vibeCategory;
+  
+  showTab(currentTab += 1);
+});
