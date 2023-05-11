@@ -6,8 +6,8 @@ const { vibeArrays } = require("../utils/vibes");
 //Got products from db, did a loop to send the vibes to the homepage
 router.get("/home", async (req, res) => {
   try {
-    const vibe = await Wine.findById("645925bcf60fd15208521c37");
-    console.log(vibe.product_vibe.vibe_id);
+    // const vibe = await Wine.findById("645925bcf60fd15208521c37");
+    // console.log(vibe.product_vibe.vibe_id);
 
     
     // console.log(vibe.product_vibe);
@@ -19,6 +19,7 @@ router.get("/home", async (req, res) => {
     const meAndFriends = vibes.meAndSomeFriends;
     const hotGirlSum = vibes.hotGirlSummer;
 
+    console.log(home);
     res.render("homepage/homepage", {
       vibes: vibes.productVibes,
       home,
@@ -35,6 +36,7 @@ router.get("/home", async (req, res) => {
 
 router.get("/vibe-check", async (req, res, next) => {
   res.render("vibe-check");
+  
 });
 
 router.get("/summer-party", async (req, res, next) => {
