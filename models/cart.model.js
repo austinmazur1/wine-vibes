@@ -20,6 +20,16 @@ const cartSchema = new Schema(
           required: true,
           default: 1,
         },
+        productName: {
+          type: String,
+          ref: "Product",
+          required: true
+        },
+        productPrice : {
+          type: Number,
+          required: true,
+          ref: "Product"
+        }
       },
     ],
   },
