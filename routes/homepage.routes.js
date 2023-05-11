@@ -22,7 +22,7 @@ router.get("/home", async (req, res) => {
     console.log(meAndFriends);
     const hotGirlSum = vibes.hotGirlSummer;
 
-    // console.log(home);
+    console.log(home);
     res.render("homepage/homepage", {
       vibes: vibes.productVibes,
       home,
@@ -38,6 +38,7 @@ router.get("/home", async (req, res) => {
 });
 
 router.get("/vibe-check", async (req, res, next) => {
+
   res.render("vibe-check");
   
 });
