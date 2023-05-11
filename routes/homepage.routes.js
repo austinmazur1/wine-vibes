@@ -19,6 +19,7 @@ router.get("/home", async (req, res) => {
     const summerVibe = vibes.summerParty;
     const home = vibes.homeAlone;    
     const meAndFriends = vibes.meAndSomeFriends;
+    console.log(meAndFriends);
     const hotGirlSum = vibes.hotGirlSummer;
 
     console.log(home);
@@ -46,24 +47,26 @@ router.get("/summer-party", async (req, res, next) => {
   const vibes = await vibeArrays();
   // console.log(vibes);
     const summerVibe = vibes.summerParty;
+    console.log(req.session.currentUser);
    //console.log(summerVibe)
     res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
 })
 router.get("/home-alone", async (req, res, next) => {
   const vibes = await vibeArrays();   
   const homeAlone = vibes.homeAlone;  
+  console.log(homeAlone);
   res.render("products/products", {userInSession: req.session.currentUser, vibe: homeAlone})
 })
 
 router.get("/me-and-friends", async (req, res, next) => {
   const vibes = await vibeArrays();   
-    const meAndFriends = vibes.meAndFriends;
-    //console.log(homeAlone)
+    const meAndFriends =  vibes.meAndSomeFriends;
+    console.log(meAndFriends)
     res.render("products/products", {userInSession: req.session.currentUser, vibe: meAndFriends})
 })
 router.get("/hot-girl-summer", async (req, res, next) => {
   const vibes = await vibeArrays();   
-    const hotGirlSum = vibes.hotGirlSum;
+    const hotGirlSum = vibes.hotGirlSummer;
     //console.log(homeAlone)
     res.render("products/products", {userInSession: req.session.currentUser, vibe: hotGirlSum})
 })

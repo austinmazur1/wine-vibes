@@ -11,13 +11,17 @@
 
     
 <h1>Products in  {{product_vibe}} category:</h1>
-    
 <ul>
   {{#each vibe}}
     <li>
       <h2>{{this.product_name}}</h2>
-      <p>Vibe: {{this.product_vibe}}</p>
-      <p>Price: {{this.product_price}}</p>
-    </li>
+      <p>Vibe: {{this.product_vibe}}</p> 
+      <p>Price: {{this.product_price}}</p> 
+ <a href="/cart/add-item/{{this.product_id}}">Add to cart</a>   
+ 
+<img src="{{this.product_image}}" alt="{{this.product_name}}">
+  </li>
+
+   
   {{/each}}
 </ul>
