@@ -17,7 +17,11 @@
       <h2>{{this.product_name}}</h2>
       <p>Vibe: {{this.product_vibe}}</p> 
       <p>Price: {{this.product_price}}</p> 
- <a href="/cart/add-item/{{this.product_id}}">Add to cart</a>   
+      <form action="/cart/add-item/{{this._id}}" method="post">
+<input type="hidden" name="id" value="{{ this._id }}">
+  {{!-- <input type="number" name="quantity" value="quantity" min="1"> --}}
+  <button type="submit" id="add-to-cart-button">Add to Cart</button>
+      </form> 
  
 <img src="{{this.product_image}}" alt="{{this.product_name}}">
   </li>

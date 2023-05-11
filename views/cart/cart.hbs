@@ -1,5 +1,15 @@
 {{#if userInSession}}
 <h2>Welcome to your cart</h2>
+<a href="/home">Home</a>
+
+{{#each userCart.items}}
+
+
+<p>Name: {{this.productName}}</p>
+<p>Price: {{this.productPrice}}</p>
+<p>Quantity: {{this.quantity}}</p>
+
+{{/each}}
 {{/if}}
 
 <button class="button">Checkout</button>
