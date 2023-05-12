@@ -14,10 +14,10 @@ button.addEventListener("click", () => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      items:[
-        {id: 1, quantity:2},
-        {id: 2, quantity:1}
-      ]
+      // items:[
+      //   {id: 1, quantity:2},
+      //   {id: 2, quantity:1}
+      // ]
     })
   }).then(res => {
     if(res.ok) return res.json()

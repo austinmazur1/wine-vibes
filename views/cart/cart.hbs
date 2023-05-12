@@ -2,7 +2,8 @@
 <h2>Welcome to your cart</h2>
 <a href="/home">Home</a>
 
-{{#each userCart.items}}
+
+{{!-- {{#each userCart.items}}
 
 
 <p>Name: {{this.productName}}</p>
@@ -10,6 +11,27 @@
 <p>Quantity: {{this.quantity}}</p>
 
 {{/each}}
-{{/if}}
 
-<button class="button">Checkout</button>
+<button class="button">Checkout</button> --}}
+
+{{/if}}
+{{!-- Sends the product data via req.body to the checkout route --}}
+  <form action="/checkout" method="POST">
+{{#each userCart.items}}
+    <input type="hidden" name="productId" value="{{this.productId}}"><p>Name: {{this.productName}}</p>
+    <input type="hidden" name="productName" value="{{this.productName}}"><p>Price: {{this.productPrice}}</p>
+    <input type="hidden" name="productPrice" value="{{this.productPrice}}"><p>Quantity: {{this.quantity}}</p>
+{{/each}}
+    <button type="submit">Checkout</button>
+  </form>
+
+{{!-- 
+<form action="/checkout" method="POST">
+  <input type="hidden" name="cart" value="{{JSON.stringify(userCart.items)}}">
+
+
+  <button type="submit">Checkout</button>
+</form> --}}
+{{!-- success_url: `${process.env.SERVER_URL}/`,
+            cancel_url: `${process.env.SERVER_URL}/cart/:id` --}}
+        
