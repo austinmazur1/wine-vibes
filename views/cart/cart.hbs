@@ -25,6 +25,13 @@
     <button type="submit">Checkout</button>
   </form>
 
+  <form action="/cart" method="post">
+  {{#each userCart.items}}
+<input type="hidden" name="productId" value="{{this.productId}}">
+<button type="submit">Remove</button>
+{{/each}}
+  </form>
+
 {{!-- 
 <form action="/checkout" method="POST">
   <input type="hidden" name="cart" value="{{JSON.stringify(userCart.items)}}">
