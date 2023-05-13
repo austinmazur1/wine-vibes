@@ -14,7 +14,7 @@ async function vibeArrays() {
     (item) => item.product_vibe === "Summer Party Night"
   );
   const homeAlone = product.filter(
-    (item) => item.product_vibe.vibe === "Home Alone"
+    (item) => item.product_vibe === "Home Alone"
   );
   const meAndSomeFriends = product.filter(
     (item) => item.product_vibe === "Me & Some Friends of Mine"
