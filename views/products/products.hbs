@@ -1,31 +1,48 @@
 
-<nav>
-  <a href="/auth/login">Login</a>
-  <a href="/auth/signup">Signup</a>
-  <a href="/vibe-check">Vibe Check</a>
-  {{#if userInSession}}
-  <a href="/auth/profile/{{userInSession._id}}">Profile</a>
-  <a href="/auth/logout">logout</a>
-  {{/if}}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse flex-row justify-content-between align-items-center" id="navbarNav"></div>
+ 
+    <ul class="navbar-nav">
+      <a class="navbar-brand" href="#">Wine Vibes Project</a>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/signup">Signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/vibe-check">Vibe Check</a>
+      </li>
+      {{#if userInSession}}
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/profile/{{userInSession._id}}">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/logout">Logout</a>
+      </li>
+      {{/if}}
+    </ul>
+  </div>
 </nav>
 
     
 <h1>Products in  {{product_vibe}} category:</h1>
-<ul>
-  {{#each vibe}}
-    <li>
-      <h2>{{this.product_name}}</h2>
-      <p>Vibe: {{this.product_vibe}}</p> 
-      <p>Price: {{this.product_price}}</p> 
-      <form action="/cart/add-item/{{this._id}}" method="post">
-<input type="hidden" name="id" value="{{ this._id }}">
-  {{!-- <input type="number" name="quantity" value="quantity" min="1"> --}}
-  <button type="submit" id="add-to-cart-button">Add to Cart</button>
-      </form> 
- 
-<img src="{{this.product_image}}" alt="{{this.product_name}}">
-  </li>
-
-   
-  {{/each}}
-</ul>
+<div class="col">
+  
+    {{#each vibe}}
+    
+      <div class="product">
+        <img class="wineImage" src="{{this.product_image}}" alt="{{this.product_name}}">
+        <h2>{{this.product_name}}</h2>
+        <p>Vibe: {{this.product_vibe}}</p>
+        <p>Price: {{this.product_price}}</p>
+        <form action="/cart/add-item/{{this._id}}" method="post">
+          <input type="hidden" name="id" value="{{ this._id }}">
+          <button type="submit" id="add-to-cart-button">Add to Cart</button>
+        </form>
+      </div>
+    
+    {{/each}}
+  
+</div>
