@@ -1,6 +1,5 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  all: initial;
 }
 
 a {
@@ -15,4 +14,43 @@ h1 {
 .hide {
   display: none;
 }
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
+
+
+ul {
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
+.vibeImage {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.wineImage {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+.col {
+  padding-left: 7%; 
+}
+
+  
+
+.col {
+  flex: 1;
+  margin: 10%;
+  display: flex;
+  padding-left: 7%; 
+  justify-content: center;
+
+}
