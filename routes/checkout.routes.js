@@ -19,7 +19,7 @@ router.post("/checkout", async (req, res, next) => {
     lineItems = [];
 
     if (!productId || !productId.length) {
-      console.log("No items found in request body");
+      res.send("No items found in cart");
     }
 
     //use the product id because we cant get the length of the body
