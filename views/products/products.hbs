@@ -33,7 +33,7 @@
     {{#each vibe}}
     
       <div class="product">
-        <img class="wineImage" src="{{this.product_image}}" alt="{{this.product_name}}">
+        <a href="/details/{{this._id}}"><img class="wineImage" src="{{this.product_image}}" alt="{{this.product_name}}"></a>
         <h2>{{this.product_name}}</h2>
         <p>Vibe: {{this.product_vibe}}</p>
         <p>Price: {{this.product_price}}</p>
