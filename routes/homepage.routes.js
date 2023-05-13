@@ -45,10 +45,8 @@ router.get("/vibe-check", async (req, res, next) => {
 
 router.get("/summer-party", async (req, res, next) => {
   const vibes = await vibeArrays();
-  // console.log(vibes);
     const summerVibe = vibes.summerParty;
-    console.log(req.session.currentUser);
-   //console.log(summerVibe)
+   console.log(summerVibe)
     res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
 })
 router.get("/home-alone", async (req, res, next) => {
@@ -84,5 +82,16 @@ router.get("/hot-girl-summer", async (req, res, next) => {
 //       next(err);
 //     });
 // })
+
+router.get('/details/:id', async (req, res, next) => {
+  try {
+    const wineId = req.params.id;
+    const details = await Wine.findById(wineId);
+    res.render('products/details', {wine: details})
+  } catch (error) {
+    next(error)
+  }
+})
+
 
 module.exports = router;
