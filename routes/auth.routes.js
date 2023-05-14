@@ -11,15 +11,15 @@ const saltRounds = 10;
 const User = require("../models/User.model");
 
 // Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
-// const isLoggedOut = require("../middleware/isLoggedOut");
-// const isLoggedIn = require("../middleware/isLoggedIn");
+const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 ////ROUTES////
 
 // GET /auth/signup WORKING
 //TODO Create the HBS views for the routes
 //took out , isLoggedOut
-router.get("/signup", (req, res) => {
+router.get("/signup", isLoggedOut, (req, res) => {
   res.render("auth/signup");
 });
 
@@ -91,8 +91,8 @@ router.post("/signup", async (req, res) => {
 
 // GET /auth/login
 //took out , isLoggedOut
-router.get("/login", (req, res) => {
-  res.render("auth/login");
+router.get("/login", isLoggedOut, (req, res) => {
+  res.render("auth/login", {userInSession: req.session.currentUser});
 });
 
 // POST /auth/login

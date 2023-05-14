@@ -1,44 +1,27 @@
 {{#if userInSession}}
-<h2>Welcome to your cart</h2>
-<a href="/home">Home</a>
+<h2>Welcome to your cart {{userInSession.username}}</h2>
+{{/if}}
 
-
-{{!-- {{#each userCart.items}}
-
-
-<p>Name: {{this.productName}}</p>
-<p>Price: {{this.productPrice}}</p>
-<p>Quantity: {{this.quantity}}</p>
-
+{{!-- form that displays the remove button --}}
+  {{#each userCart.items}}
+  <form action="/cart/{{this.productId}}" method="post">
+<input type="hidden" name="_method" value="DELETE">
+ <input type="hidden" name="productId" value="{{this.productId}}"><p>Name: {{this.productName}}</p>
+    <input type="hidden" name="productName" value="{{this.productName}}"><p>Price: {{this.productPrice}}</p>
+    <input type="hidden" name="productPrice" value="{{this.productPrice}}"><p>Quantity: {{this.quantity}}</p>
+<button type="submit">Remove</button>
+  </form>
 {{/each}}
 
-<button class="button">Checkout</button> --}}
-
-{{/if}}
 {{!-- Sends the product data via req.body to the checkout route --}}
   <form action="/checkout" method="POST">
 {{#each userCart.items}}
-    <input type="hidden" name="productId" value="{{this.productId}}"><p>Name: {{this.productName}}</p>
-    <input type="hidden" name="productName" value="{{this.productName}}"><p>Price: {{this.productPrice}}</p>
-    <input type="hidden" name="productPrice" value="{{this.productPrice}}"><p>Quantity: {{this.quantity}}</p>
-{{/each}}
+    <input type="hidden" name="productId" value="{{this.productId}}">
+    <input type="hidden" name="productName" value="{{this.productName}}">
+    <input type="hidden" name="productPrice" value="{{this.productPrice}}">
+  {{/each}}
     <button type="submit">Checkout</button>
+    
   </form>
 
-  <form action="/cart" method="post">
-  {{#each userCart.items}}
-<input type="hidden" name="productId" value="{{this.productId}}">
-<button type="submit">Remove</button>
-{{/each}}
-  </form>
 
-{{!-- 
-<form action="/checkout" method="POST">
-  <input type="hidden" name="cart" value="{{JSON.stringify(userCart.items)}}">
-
-
-  <button type="submit">Checkout</button>
-</form> --}}
-{{!-- success_url: `${process.env.SERVER_URL}/`,
-            cancel_url: `${process.env.SERVER_URL}/cart/:id` --}}
-        

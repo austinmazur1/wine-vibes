@@ -89,16 +89,18 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
-  const itemId = req.body.productId;
+//remove item from cart
+router.post("/:id", async (req, res, next) => {
+  const itemId = req.params.id;
   const userId = req.session.currentUser._id;
   const userCart = await Cart.findOne({ userId: userId });
   const cartItems = userCart.items;
 
+
   //loop to compare cartItem with form item
   //if the same, we remove that item
   for (let i = 0; i < cartItems.length; i++) {
-    if (cartItems[i].productId.toString() === itemId.toString()) {
+    if (cartItems[i].productId.toString() === itemId) {
       cartItems.splice(i, 1);
       break;
     }
