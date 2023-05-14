@@ -17,6 +17,8 @@ const favicon = require("serve-favicon");
 // https://www.npmjs.com/package/path
 const path = require("path");
 
+const hbs = require("hbs")
+
 // ℹ️ Session middleware for authentication
 // https://www.npmjs.com/package/express-session
 // const session = require("express-session");
@@ -45,6 +47,8 @@ module.exports = (app) => {
   app.set("view engine", "hbs");
   // AHandles access to the public folder
   app.use(express.static(path.join(__dirname, "..", "public")));
+
+  hbs.registerPartials(__dirname + '/views/partials');
 
   // Handles access to the favicon
   app.use(

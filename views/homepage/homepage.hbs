@@ -1,71 +1,44 @@
+<h1>Welcome to Wine Vibes!</h1>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse flex-row justify-content-between align-items-center" id="navbarNav"></div>
- 
-    <ul class="navbar-nav">
-      <a class="navbar-brand" href="#">Wine Vibes Project</a>
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/signup">Signup</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/vibe-check">Vibe Check</a>
-      </li>
-      {{#if userInSession}}
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/profile/{{userInSession._id}}">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/logout">Logout</a>
-      </li>
-      {{/if}}
-    </ul>
-  </div>
-</nav>
+<p>Here are some of our featured products:</p>
 
-  {{!-- {{#each products}}
-    <li>
-      <h2>{{this.product_name}}</h2>
-      <p>Vibe: {{this.product_vibe}}</p>
-      <p>Price: {{this.product_price}}</p>
-    </li>
-  {{/each}} --}}
+Choose your Vibe
+<div class="container text-center">
+  <div class="row align-items-center">
+    <div class="col">
+      {{#each vibes}}
 
-    
-    <h1>Welcome to Wine Vibes!</h1>
-    
-    <p>Here are some of our featured products:</p>
-    
-      Choose your Vibe
-      <div class="container text-center">
-       <div class="row align-items-center">
-        <div class="col">
-      {{#each vibes}} 
-        
-       
- 
-      {{#if (eq @ index 0)}}
-          <a href="/summer-party"><img class = "vibeImage"src="https://i.ibb.co/Q9c4FyK/summer-party2.jpg" alt={{this}}></a>
-      
-      {{else if (eq @ index 1)}}
-          <a href="/home-alone"><img class = "vibeImage" src="https://i.ibb.co/pJmH9MD/home-alone.jpg" alt={{this}}></a>
-      
-      {{else if (eq @ index 2)}}    
-          <a href="/me-and-friends"><img  class = "vibeImage"src="https://i.ibb.co/WPs30pV/Me-and-friends2.jpg" alt={{this}}></a>
-     
-      {{else if (eq @ index 3)}}    
-          <a href="/hot-girl-summer"><img class = "vibeImage" src="https://i.ibb.co/ww8LBkv/hot-girls-summer2.jpg" alt={{this}}></a>
-      
-      {{/if}}
- 
-      
+        {{#if (eq @index 0)}}
+          <a href="/summer-party"><img
+              class="vibeImage"
+              src="https://i.ibb.co/Q9c4FyK/summer-party2.jpg"
+              alt={{this}}
+            /></a>
+
+        {{else if (eq @index 1)}}
+          <a href="/home-alone"><img
+              class="vibeImage"
+              src="https://i.ibb.co/pJmH9MD/home-alone.jpg"
+              alt={{this}}
+            /></a>
+
+        {{else if (eq @index 2)}}
+          <a href="/me-and-friends"><img
+              class="vibeImage"
+              src="https://i.ibb.co/WPs30pV/Me-and-friends2.jpg"
+              alt={{this}}
+            /></a>
+
+        {{else if (eq @index 3)}}
+          <a href="/hot-girl-summer"><img
+              class="vibeImage"
+              src="https://i.ibb.co/ww8LBkv/hot-girls-summer2.jpg"
+              alt={{this}}
+            /></a>
+
+        {{/if}}
+
       {{/each}}
-     </div>
+    </div>
   </div>
 </div>
-
- 
-
-{{!-- Tweaked this a bit, now just displaying the 4 vibes we have --}}

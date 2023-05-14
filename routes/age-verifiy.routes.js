@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const isLoggedOut = require("../middleware/isLoggedOut");
 
-// Show the age verification view
-router.get('/', (req, res) => {
-  res.render('age-verification/age-verification', { over18: false });
+// Show the age verification view, add middleware so user doesnt need to click age verification
+router.get('/', isLoggedOut, (req, res) => {
+  res.render('age-verification/age-verification', { over18: false});
 });
 
 // Handle form submission to check age and redirect to homepage if user is over 18
