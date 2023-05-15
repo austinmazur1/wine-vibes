@@ -1,27 +1,30 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse flex-row justify-content-between align-items-center" id="navbarNav"></div>
- 
-    <ul class="navbar-nav">
-      <a class="navbar-brand" href="/home">Wine Vibes</a>
-      {{#unless userInSession}}
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/login">Login</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/signup">Signup</a>
-      </li>
-      {{/unless}}
-      <li class="nav-item">
-        <a class="nav-link" href="/vibe-check">Vibe Check</a>
-      </li>
-      {{#if userInSession}}
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/profile/{{userInSession._id}}">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/auth/logout">Logout</a>
-      </li>
-      {{/if}}
-    </ul>
-  </div>
+<link rel ="icon" type ="image/png" href="https://i.ibb.co/FVBYZHY/wine-vibes-flavicon.png">
+<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+  <div class="collapse navbar-collapse flex-row justify-content-between align-items-center" id="navbarNav"></div> 
+  <ul class="navbar-nav" >
+    <!-- The following line displays the Wine Vibes logo -->
+    <li class="nav-item">
+      <a class="nav-link"> <img class ="logo_image"src="https://i.ibb.co/vspM6N5/wine-vibes-logo.jpg" alt="Wine Vibes"></a>
+    </li>
+   
+    {{#unless userInSession}}
+    <li class="nav-item">
+      <a class="nav-link" href="/auth/login">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/auth/signup">Signup</a>
+    </li>
+    {{/unless}}
+    <li class="nav-item">
+      <a class="nav-link" href="/vibe-check">Vibe Check</a>
+    </li>
+    {{#if userInSession}}
+    <li class="nav-item">
+      <a class="nav-link" href="/auth/profile/{{userInSession._id}}">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/auth/logout">Logout</a>
+    </li>
+    {{/if}}
+  </ul>
 </nav>
