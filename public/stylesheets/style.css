@@ -61,3 +61,31 @@ li {
   justify-content: center;
 
 }
+
+.Menu_img {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Welcome_img {
+  width: 500px;
+  height: auto; 
+  display: flex;
+}
+
+.Welcome {
+  margin-right: 10px;
+}
+
+.Welcome_text {
+  margin-right: 1000px;
+  text-align: justify;
+}
+
+
+
+/*     --red-color: #850E35
+    --white-color: #FFFFFF
+    --black-color: #000000 /
