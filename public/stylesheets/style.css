@@ -1,3 +1,13 @@
+/*colors{
+  --red-color: #850E35
+  --white-color: #FFFFFF
+  --black-color: #000000
+}*/
+
+
+
+
+
 body {
   all: initial;
 }
@@ -61,3 +71,42 @@ li {
   justify-content: center;
 
 }
+
+/*Login page*/
+.container-fluid m-0.custom-bg
+{
+  background-color: #850E35
+}
+
+/*vibe-check page*/
+.vibe-check{
+  background-image: url(https://i.ibb.co/zx5D4LH/wine-aesthetic.jpg);
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 0;
+  height: 450px;
+  text-align: center;
+  color: white;
+  font-size: 95pt;
+  text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2px 2px black;
+  }
+  .col1{    
+    background-color: #850E35;
+    height: 270px;
+    text-align: center;
+    color: white;
+    font-size: 35pt;
+    border: 20px solid white;
+    
+  }
+  .col2{    
+    background-color: #F092B3;
+    height: 270px;
+    text-align: center;
+    color: white;
+    font-size: 35pt;
+    border: 20px solid white;
+  }
+    
+  
