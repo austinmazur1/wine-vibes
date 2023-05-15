@@ -1,0 +1,12 @@
+:root {
+    --red-color: #850E35
+    --white-color: #FFFFFF
+    --black-color: #000000
+}
+
+.Logo {
+  display: block; /* Ensures the image is a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  width: 50%; /* Sets the width of the image to 50% of its container */
+}
+
