@@ -2,6 +2,8 @@ body {
   all: initial;
 }
 
+
+
 a {
   color: #00b7ff;
 }
@@ -33,15 +35,20 @@ li {
   width: 400px;
   height: 400px;
   object-fit: cover;
+  
 }
-
+.logo_image{
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
 .wineImage {
   width: 400px;
   height: 400px;
   object-fit: contain;
 }
 .col {
-  padding-left: 7%; 
+  margin-left:20%; 
 }
 
   
