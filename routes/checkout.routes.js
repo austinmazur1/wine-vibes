@@ -2,19 +2,17 @@ const express = require("express");
 const session = require("express-session");
 const router = express.Router();
 const Cart = require("../models/cart.model")
+const isLoggedIn = require('../middleware/isLoggedIn');
 
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
-router.post("/checkout", async (req, res, next) => {
+router.post("/checkout", isLoggedIn, async (req, res, next) => {
   try {
     //get the data from form on cart
     //arrays
     const productId = req.body.productId;
     const productName = req.body.productName;
     let productPrice = req.body.productPrice;
-
-    console.log(typeof productPrice);
-    // console.log(typeof parseFloat(productPrice));
 
     lineItems = [];
 

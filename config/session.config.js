@@ -29,7 +29,7 @@ module.exports = (app) => {
         //not fully standardized as per docs, 'lax - lax same site enforcement'
         secure: process.env.NODE_ENV === "production",
         httpOnly: true,
-        maxAge: 30 * 24 * 60 * 60 * 1000 //1 month
+        maxAge: 24 * 60 * 60 * 1000 //24 hours
                 // maxAge: 60000,
       },
       //make sure to use the var that holds string from .env file
