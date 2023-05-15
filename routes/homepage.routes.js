@@ -6,23 +6,15 @@ const { vibeArrays } = require("../utils/vibes");
 //Got products from db, did a loop to send the vibes to the homepage
 router.get("/home", async (req, res) => {
   try {
-
     const vibe = await Wine.find();
-   
 
-
-    
-    // console.log(vibe.product_vibe);
     //calls imported function that retrieves seperated vibe arrays
     const vibes = await vibeArrays();
-    // console.log(vibes.productVibes);
     const summerVibe = vibes.summerParty;
-    const home = vibes.homeAlone;    
+    const home = vibes.homeAlone;
     const meAndFriends = vibes.meAndSomeFriends;
-    console.log(meAndFriends);
     const hotGirlSum = vibes.hotGirlSummer;
 
-    console.log(home);
     res.render("homepage/homepage", {
       vibes: vibes.productVibes,
       home,
@@ -37,61 +29,66 @@ router.get("/home", async (req, res) => {
   }
 });
 
-router.get("/vibe-check", async (req, res, next) => {
-
-  res.render("vibe-check");
-  
+router.get("/summer-party", async (req, res, next) => {
+  try {
+    const vibes = await vibeArrays();
+    const summerVibe = vibes.summerParty;
+    res.render("products/products", {
+      userInSession: req.session.currentUser,
+      vibe: summerVibe,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+router.get("/home-alone", async (req, res, next) => {
+  try {
+    const vibes = await vibeArrays();
+    const homeAlone = vibes.homeAlone;
+    res.render("products/products", {
+      userInSession: req.session.currentUser,
+      vibe: homeAlone,
+    });
+  } catch (error) {
+    next(error);
+  }
 });
 
-router.get("/summer-party", async (req, res, next) => {
-  const vibes = await vibeArrays();
-    const summerVibe = vibes.summerParty;
-   console.log(summerVibe)
-    res.render("products/products", {userInSession: req.session.currentUser, vibe: summerVibe})
-})
-router.get("/home-alone", async (req, res, next) => {
-  const vibes = await vibeArrays();   
-  const homeAlone = vibes.homeAlone;  
-  console.log(homeAlone);
-  res.render("products/products", {userInSession: req.session.currentUser, vibe: homeAlone})
-})
-
 router.get("/me-and-friends", async (req, res, next) => {
-  const vibes = await vibeArrays();   
-    const meAndFriends =  vibes.meAndSomeFriends;
-    console.log(meAndFriends)
-    res.render("products/products", {userInSession: req.session.currentUser, vibe: meAndFriends})
-})
+  try {
+    const vibes = await vibeArrays();
+    const meAndFriends = vibes.meAndSomeFriends;
+    res.render("products/products", {
+      userInSession: req.session.currentUser,
+      vibe: meAndFriends,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 router.get("/hot-girl-summer", async (req, res, next) => {
-  const vibes = await vibeArrays();   
+  try {
+    const vibes = await vibeArrays();
     const hotGirlSum = vibes.hotGirlSummer;
-    //console.log(homeAlone)
-    res.render("products/products", {userInSession: req.session.currentUser, vibe: hotGirlSum})
-})
+    res.render("products/products", {
+      userInSession: req.session.currentUser,
+      vibe: hotGirlSum,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 
-//wine vibes rout
-// router.get('/vibes/:vibe', (req, res, next) => {
-//   const vibe = req.params.vibe;
-//   Wine.find({ product_vibe: vibe })
-//     .then((wine) => {
-//       console.log(wine);
-//       res.render('products/products', { wine, vibe });
-//     })
-//     .catch((err) => {
-//       console.error("Error retrieving products: ", err);
-//       next(err);
-//     });
-// })
-
-router.get('/details/:id', async (req, res, next) => {
+router.get("/details/:id", async (req, res, next) => {
   try {
     const wineId = req.params.id;
     const details = await Wine.findById(wineId);
-    res.render('products/details', {wine: details})
+    res.render("products/details", { wine: details });
   } catch (error) {
-    next(error)
+    next(error);
   }
-})
+});
 
+router.get("/vibe-check", (req, res) => res.render("vibe-check"));
 
 module.exports = router;

@@ -70,6 +70,7 @@ document.getElementById("nextBtn").addEventListener("click", function() {
   var aloneOrNo = document.querySelector('input[name="aloneOrNo"]:checked').value;
   var setting = document.querySelector('input[name="setting"]:checked').value;
   var preferedWine = document.querySelector('input[name="preferedWine"]:checked').value;
+  let surprise = document.querySelector('#surprise')
   
   var vibeCategory = "";
   if (aloneOrNo === "alone" && setting === "vibing"&& preferedWine ==="impressSnob" ) {
@@ -97,9 +98,12 @@ document.getElementById("nextBtn").addEventListener("click", function() {
   } else if (aloneOrNo === "not-sure" && setting === "vibing"&& preferedWine ==="impressSnob") {
     vibeCategory = "me-and-friends";
   } else {
-    vibeCategory = "summer-party";
+    const  randomCategories = ["home-alone", "me-and-friends", "hot-girl-summer", "summer-party"];
+    const randomIndex = Math.floor(Math.random() * randomCategories.length);
+    vibeCategory = randomCategories[randomIndex];
   }
-  
+  //Else a random category is chosen
+
   window.location.href = "/" + vibeCategory;
   
   showTab(currentTab += 1);

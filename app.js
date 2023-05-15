@@ -29,8 +29,7 @@ const projectName = "wine-vibes-main";
 
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
-// 👇 Start handling routes here
-//TODO merge dupliacte homepages
+// Routes //
 const ageVerify = require("./routes/age-verifiy.routes"); //Hompage
 app.use("/", ageVerify);
 

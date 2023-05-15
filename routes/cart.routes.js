@@ -6,17 +6,18 @@ const Cart = require("../models/cart.model");
 const Product = require("../models/Wine.model");
 
 //middle page route
-router.get("/add-item/:id", async (req, res, next) => {
+router.get("/add-item/:id", (req, res, next) => {
   res.render("cart/add-item");
 });
 
 //handles when user adds items to the cart
 router.post("/add-item/:id", async (req, res, next) => {
   try {
+    if (!req.session.currentUser) {
+      res.redirect("/auth/signup");
+    }
     const userId = req.session.currentUser._id;
-
     const id = req.body.id;
-
     const product = await Product.findById(id);
 
     let userCart = await Cart.findOne({ userId }).populate("items");
@@ -68,7 +69,6 @@ router.post("/add-item/:id", async (req, res, next) => {
   }
 });
 
-//Cart
 //Render the cart
 router.get("/", async (req, res, next) => {
   //grab user id from session
@@ -95,7 +95,6 @@ router.post("/:id", async (req, res, next) => {
   const userId = req.session.currentUser._id;
   const userCart = await Cart.findOne({ userId: userId });
   const cartItems = userCart.items;
-
 
   //loop to compare cartItem with form item
   //if the same, we remove that item
