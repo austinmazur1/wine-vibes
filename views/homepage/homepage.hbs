@@ -23,44 +23,55 @@
 <p>Cheers to good times and great wine!</p>
 </div>
 </div>
-<h1 Class="Welcome">Choose your Vibe!</h1>
+
+<h1 Class="ChooseVibe">Choose your Vibe!</h1>
 <div class="container">
   <div class="row d-flex justify-content-between">
-    <div class="col">
-      {{#each vibes}}
-
-        {{#if (eq @index 0)}}
-          <a href="/summer-party"><img
-              class="vibeImage"
-              src="https://i.ibb.co/Q9c4FyK/summer-party2.jpg"
-              alt={{this}}
-            /></a>
-
-        {{else if (eq @index 1)}}
-          <a href="/home-alone"><img
-              class="vibeImage"
-              src="https://i.ibb.co/pJmH9MD/home-alone.jpg"
-              alt={{this}}
-            /></a>
-
-        {{else if (eq @index 2)}}
-          <a href="/me-and-friends"><img
-              class="vibeImage"
-              src="https://i.ibb.co/WPs30pV/Me-and-friends2.jpg"
-              alt={{this}}
-            /></a>
-
-        {{else if (eq @index 3)}}
-          <a href="/hot-girl-summer"><img
-              class="vibeImage"
-              src="https://i.ibb.co/bsSKCwd/hot-girls-summer.jpg"
-              alt={{this}}
-            /></a>
-
-        {{/if}}
-
-      {{/each}}
+    <div class="col-12 col-md-6">
+      <a href="/summer-party"><img
+          class="vibeImage"
+          src="https://i.ibb.co/Q9c4FyK/summer-party2.jpg"
+          alt="Summer Party"
+        /></a>
+    </div>
+    <div class="col-12 col-md-6">
+      <a href="/home-alone"><img
+          class="vibeImage"
+          src="https://i.ibb.co/pJmH9MD/home-alone.jpg"
+          alt="Home Alone"
+        /></a>
+    </div>
+    <div class="col-12 col-md-6">
+      <a href="/me-and-friends"><img
+          class="vibeImage"
+          src="https://i.ibb.co/WPs30pV/Me-and-friends2.jpg"
+          alt="Me and Friends"
+        /></a>
+    </div>
+    <div class="col-12 col-md-6">
+      <a href="/hot-girl-summer"><img
+          class="vibeImage"
+          src="https://i.ibb.co/bsSKCwd/hot-girls-summer.jpg"
+          alt="Hot Girl Summer"
+        /></a>
     </div>
   </div>
 </div>
+
+<div class="rectangle"></div>
+
+
+
+<footer>
+  <div class="container">
+    <div class="address">
+      <p>Address:</p>
+      <p>Estrada Nacional 10,<br>2925-901 Azeitão,<br>Portugal</p>
+    </div>
+    <div class="contacts">
+      <p>Contacts:</p>
+      <p>T: +351 930 187 969<br>E: contact@winevibes.com</p>
+    </div>
+  </div>
+</footer>
 
