@@ -73,12 +73,33 @@ li {
 }
 
 
-/*Login page*/
-.container-fluid m-0.custom-bg
+/*Login page, sign up page, logout page*/
+.login_container
 {
-  background-color: #850E35
+  background-color: #850E35;
+  height: 500px;
+  text-align: center;
+  color: white;
 }
-
+.login_form{
+  height: 65px;
+  width: 450px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  font-size: 15pt;
+}
+.login_button{
+  height: 65px;
+  width: 450px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  border-radius: 250px;
+  background-color: #850E35;
+  border: 5px solid white;
+  font-size: 20pt;
+}
 /*vibe-check page*/
 .vibe-check{
   background-image: url(https://i.ibb.co/zx5D4LH/wine-aesthetic.jpg);
@@ -95,6 +116,7 @@ li {
   .col1{    
     background-color: #850E35;
     height: 270px;
+    width: 1850px;
     text-align: center;
     color: white;
     font-size: 35pt;
@@ -104,12 +126,23 @@ li {
   .col2{    
     background-color: #F092B3;
     height: 270px;
+    width: 1850px;
     text-align: center;
     color: white;
     font-size: 35pt;
     border: 20px solid white;
   }
     
+  .Submit_button{
+    background-color: #850E35;
+    height: 270px;
+    width: 1900px;
+    text-align: center;
+    color: white;
+    font-size: 55pt;
+    border: 20px solid white;
+    border-radius: 250px;
+  }
 
 .Menu_img {
   width: 100vw;
