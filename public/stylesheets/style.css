@@ -48,8 +48,8 @@ li {
   
 }
 .logo_image{
-  width: 400px;
-  height: 400px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 .wineImage {
@@ -121,7 +121,7 @@ li {
 .Welcome_img {
   position: absolute;
   height: 520px;
-  top: -60px;
+  top: -30px;
   left: 320px;
   z-index: 2;
 }
@@ -129,15 +129,15 @@ li {
 .Welcome {
   position: absolute;
   top: 20px;
-  left: 1000;
+  left: 800;
   z-index: 2;
 }
 
 .Welcome_text {
   font-size: 20px;
-  margin-top: 50px;
+  margin-top: 200px;
   margin-right: 300px;
-  margin-left: 1000px;
+  margin-left: 800px;
   position: relative;
   z-index: 1;
 }
@@ -150,6 +150,79 @@ li {
 .WineVibes{
   color:darkred;
 }
+
+.ChooseVibe{
+  color:white;
+  display: flex;
+  margin-top: 150px;
+  position: absolute;;
+  margin-left: 550px;
+  font-size: 50px;
+}
+
+.container {
+  margin-top: 220px;
+  margin-left: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  flex-basis: 50%;
+}
+
+.col-md-3 {
+  flex-basis: 25%;
+}
+
+.vibeImage{
+  width: 375px;
+  height: 375px;
+}
+
+.rectangle {
+  width: 1512px;
+  height: 500px;
+  background-color: #850E35;
+  margin-top: -460px;
+}
+
+/*footer*/
+
+footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .address,
+footer .contacts {
+  flex-basis: 50%;
+}
+
+@media (max-width: 767px) {
+  footer .address,
+  footer .contacts {
+    flex-basis: 100%;
+  }
+}
+
+
 
 /*     --red-color: #850E35
     --white-color: #FFFFFF
