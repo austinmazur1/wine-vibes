@@ -1,140 +1,129 @@
-<form id="form" action="#" method="post">
-      <h1>Let us help!</h1>
-      <!-- create a tab for each step in the form -->
-      <div class="tab1">
-        Drinking with someone?
-        <p>
-          <input
-            type="radio"
-            id="alone"
-            name="aloneOrNo"
-            value="alone"
-            checked
-          />
-          <label for="alone">Alone</label>
-        </p>
-        <p>
-          <input
-            type="radio"
-            id="friends"
-            name="aloneOrNo"
-            value="friends"
-          />
-          <label for="friends">With Friends</label>
-        </p>
-        <p>
-      <input
-        type="radio"
-        id="girls"
-        name="aloneOrNo"
-        value="girls"
-      />
-      <label for="girls">With My Girls</label>
-    </p>
-    <p>
-      <input
-        type="radio"
-        id="not-sure"
-        name="aloneOrNo"
-        value="not-sure"
-      />
-      <label for="not-sure">Not Sure</label>
-    </p>
+     
+    <form id="form" action="#" method="post">
+      <h1 class="vibe-check"><br><br>Let us help!</h1>
+    
+      <div class="container  ">
+       <div class="row d-flex justify-content-between">
+         <div class="col1">
+          <br><br>Drinking with someone?
+          
+            <input
+              type="radio"
+              id="alone"
+              name="aloneOrNo"
+              value="alone"
+              checked
+            />
+            <label for="alone">Alone</label>
+          
+            <input
+              type="radio"
+              id="friends"
+              name="aloneOrNo"
+              value="friends"
+            />
+            <label for="friends">With Friends</label>
+          
+            <input
+              type="radio"
+              id="girls"
+              name="aloneOrNo"
+              value="girls"
+            />
+            <label for="girls">With My Girls</label>
+         
+            <input
+              type="radio"
+              id="not-sure"
+              name="aloneOrNo"
+              value="not-sure"
+            />
+            <label for="not-sure">Not Sure</label>
+          
+        </div>
+     
+        <div class="col2">
+          <br><br>Whats the setting?
+          
+            <input
+              type="radio"
+              id="chilling"
+              name="setting"
+              value="chilling"
+              checked
+            />
+            <label for="chilling">Just Chilling</label>
+          
+            <input
+              type="radio"
+              id="rocking"
+              name="setting"
+              value="rocking"
+            />
+            <label for="rocking">We're Gonna Rock This Night</label>
+         
+            <input
+              type="radio"
+              id="vibing"
+              name="setting"
+              value="vibing"
+            />
+            <label for="vibing">Vibing at Home</label>
+          
+            <input
+              type="radio"
+              id="spontaneous"
+              name="setting"
+              value="spontaneous"
+            />
+            <label for="spontaneous">Spontaneous</label>
+          
+        </div>
+      
+        <div class="col1">
+          <br><br>Prefered wine?
+          
+            <input
+              type="radio"
+              id="goodWine"
+              name="preferedWine"
+              value="goodWine"
+              checked
+            />
+            <label for="goodWine">Just a Good Wine</label>
+         
+            <input
+              type="radio"
+              id="easyDrinking"
+              name="preferedWine"
+              value="easyDrinking"
+            />
+            <label for="easyDrinking">Easy Drinking Wine</label>
+        
+            <input
+              type="radio"
+              id="impressSnob"
+              name="preferedWine"
+              value="impressSnob"
+            />
+            <label for="impressSnob">Wanna Impress a Wine Snob</label>
+         
+            <input
+              type="radio"
+              id="girlyDrops"
+              name="preferedWine"
+              value="girlyDrops"
+            />
+            <label for="girlyDrops">Girly Drops</label>
+          
+        </div>
       </div>
-      <div class="tab2">
-        Whats the setting?
-        <p>
-      <input
-        type="radio"
-        id="chilling"
-        name="setting"
-        value="chilling"
-        checked
-      />
-      <label for="chilling">Just Chilling</label>
-    </p>
-    <p>
-      <input
-        type="radio"
-        id="rocking"
-        name="setting"
-        value="rocking"
-      />
-      <label for="rocking">We're Gonna Rock This Night</label>
-    </p>
-    <p>
-      <input
-        type="radio"
-        id="vibing"
-        name="setting"
-        value="vibing"
-      />
-      <label for="vibing">Vibing at Home</label>
-    </p>
-    <p>
-      <input
-        type="radio"
-        id="spontaneous"
-        name="setting"
-        value="spontaneous"
-      />
-      <label for="spontaneous">Spontaneous</label>
-    </p>
-  </div>
-      </div>
-      <div class="tab3">
-        Prefered wine?
-        <p>
-          <input
-            type="radio"
-            id="goodWine"
-            name="preferedWine"
-            value="goodWine"
-            checked
-          />
-          <label for="red">just a good wine</label>
-        </p>
-        <p>
-          <input
-            type="radio"
-            id="easyDrinking"
-            name="preferedWine"
-            value="easyDrinking"
-          />
-          <label for="easyDrinking">easy drinking wine</label>
-        </p>
-        <p>
-          <input
-            type="radio"
-            id="impressSnob"
-            name="preferedWine"
-            value="impressSnob"
-          />
-          <label for="impressSnob">wanna impress a wine snob</label>
-        </p>
-         <p>
-          <input
-            type="radio"
-            id="girlyDrops"
-            name="preferedWine"
-            value="girlyDrops"
-          />
-          <label for="girlyDrops">girly drops</label>
-        </p>
-      </div>
-
-      {{!-- <div style="overflow: auto">
+    </div>
+    <div style="overflow: auto">
         <div style="float: right">
-          <button type="button" id="prevBtn">
-            Previous
-          </button> --}}
+          
           <button type="button" id="nextBtn">Submit</button>
         </div>
       </div>
+</div>
 
-      <div style="text-align: center; margin-top: 40px">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-      </div>
-    </form>
