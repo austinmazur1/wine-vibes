@@ -4,7 +4,8 @@ const isLoggedOut = require("../middleware/isLoggedOut");
 const {isOfAge} = require("../middleware/isOfAge");
 
 // Show the age verification view, add middleware so user doesnt need to click age verification
-router.get('/', isLoggedOut, isOfAge, (req, res) => {
+//isOfAge crashed the webpage
+router.get('/', isLoggedOut, (req, res) => {
   res.render('age-verification/age-verification', { over18: false});
 });
 
