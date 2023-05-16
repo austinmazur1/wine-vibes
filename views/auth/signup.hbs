@@ -1,29 +1,31 @@
+<div class = "login_container">
 <div id="form">
-  <h2>Sign Up</h2>
+  <br><br>
   <form action="/auth/signup" method="POST">
 
 
-      <input type="text" name="username" placeholder="Your username" />
+      <input class="login_form" type="text" name="username" placeholder="Your username" /><br>
     
 
 
-      <input type="email" name="email" placeholder="Your email" />
+      <input class="login_form" type="email" name="email" placeholder="Your email" /><br>
     
 
 
-      <input type="number" name="age" placeholder="Age" />
+      <input class="login_form" type="number" name="age" placeholder="Age" /><br>
     
 
 
 
-      <input type="password" name="password" placeholder="Your password" />
+      <input class="login_form" type="password" name="password" placeholder="Your password" /><br>
     
 
-    <button type="submit">Sign Up</button>
+    <button  class="login_button" type="submit">Sign Up</button>
 
 
     {{#if errorMessage}}
       <p class="error">{{errorMessage}}</p>
     {{/if}}
   </form>
+</div>
 </div>
