@@ -79,22 +79,57 @@ li {
   height: 400px;
   object-fit: contain;
 }
-.col {
+/* .col {
   margin-left:20%; 
-}
+} */
 
   
 
 .col {
+  margin-top: 6rem;
   flex: 1;
-  margin: 10%;
+  /* margin: 10%; */
   display: flex;
-  padding-left: 7%; 
+  /* padding-left: 7%;   */
+  flex-wrap: wrap;
   justify-content: center;
 
 }
 
+.product{ 
+  background-color: #ffffff;
+  padding: 1rem;
+  flex-basis: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+}
 
+.product-details {
+  min-width: 0;
+  padding: 1rem;
+  /* background-color: #850E35; */
+  display: flex;
+  flex-direction: column;
+}
+
+.current-vibe {
+  background-color: #850E35;
+  color:white;
+  padding: 2rem;
+  /* display: flex; */
+  /* margin-top: 150px; */
+  /* position: absolute; */
+  position: relative;
+
+  display: block;
+  text-align: center;
+  /* margin-left: 550px; */
+  font-size: 50px;
+  overflow-x: hidden;
+}
 /*Login page, sign up page, logout page*/
 .login_container
 {
@@ -303,12 +338,12 @@ li {
   height: 375px;
 }
 
-.rectangle {
+/* .rectangle {
   width: 1512px;
   height: 500px;
   background-color: #850E35;
   margin-top: -460px;
-}
+} */
 
 .test{
   display: flex;
