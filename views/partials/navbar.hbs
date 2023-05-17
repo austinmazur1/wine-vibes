@@ -18,7 +18,7 @@
           alt="Wine Vibes"
         /></a>
     </li>
-
+  
     {{#unless userInSession}}
       <li class="nav-item">
         <a class="nav-link" href="/auth/login">Login</a>
@@ -26,10 +26,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/auth/signup">Signup</a>
       </li>
-    {{/unless}}
-    <li class="nav-item">
-      <a class="nav-link" href="/vibe-check">Vibe Check</a>
-    </li>
+   
     {{#if userInSession}}
       <li class="nav-item">
         <a
