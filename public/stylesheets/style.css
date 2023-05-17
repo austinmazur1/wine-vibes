@@ -10,6 +10,7 @@
 
 body {
   all: initial;
+overflow-x: hidden;
 }
 
 
@@ -149,10 +150,13 @@ li {
   }
 
 .Menu_img {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* width: 100vw; */
+  background-size: 100%;
+  /* width: 100rem; */
+  height: auto;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .Welcome_img1 {
@@ -193,17 +197,25 @@ li {
 
 .ChooseVibe{
   font-family: 'Rubik', sans-serif;
+  /* color:white; */
   color:white;
-  display: flex;
-  margin-top: 150px;
-  position: absolute;;
-  margin-left: 550px;
+  top: 11rem;
+  /* display: flex; */
+  /* margin-top: 150px; */
+  /* position: absolute; */
+  position: relative;
+
+  display: block;
+  text-align: center;
+  /* margin-left: 550px; */
   font-size: 50px;
+  overflow-x: hidden;
 }
 
 .container {
-  margin-top: 220px;
-  margin-left: 5px;
+  /* margin-top: 220px; */
+  /* margin-left: 5px; */
+  padding: 10rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -231,6 +243,13 @@ li {
   height: 500px;
   background-color: #850E35;
   margin-top: -460px;
+}
+
+.test{
+  display: flex;
+  justify-content: center;
+  background-color: #850E35;
+  margin-top: 4rem;
 }
 
 /*footer*/
