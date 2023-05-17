@@ -26,6 +26,7 @@ h1 {
 .hide {
   display: none;
 }
+
 .navbar-nav {
   font-family: 'Rubik', sans-serif;
   display: flex;
@@ -33,14 +34,30 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-right: 300px;
+  text-decoration: none;
 }
 
-.logo_image{
+.nav-link {
+  text-decoration: none;
+  font-family: 'Rubik';
+  font-weight: bold;
+  font-size: 25px;
+  color: #850E35;
+}
+
+.logo_image {
   width: 100px;
   height: 100px;
   object-fit: contain;
   margin-left: 50px;
+  margin-right: 850px;
 }
+
+.navbar-nav.right {
+  margin-left: auto;
+  margin-right: 150px;
+}
+
 
 /*Homepage*/
 ul {
@@ -139,7 +156,7 @@ li {
     
   .Submit_button{
     background-color: #850E35;
-    height: 270px;
+    height: 1270px;
     width: 1900px;
     text-align: center;
     color: white;
@@ -147,6 +164,33 @@ li {
     border: 20px solid white;
     border-radius: 250px;
   }
+  /*cart page, */
+.cart_container
+{
+  background-color: #850E35;
+  height: 500px;
+  text-align: center;
+  color: white;
+}
+.cart_form{
+  height: 65px;
+  width: 450px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  font-size: 15pt;
+}
+.cart_button{
+  height: 65px;
+  width: 450px;
+  text-align: center;
+  color: white;
+  margin: 10px;
+  border-radius: 250px;
+  background-color: #850E35;
+  border: 5px solid white;
+  font-size: 20pt;
+}
 
 .Menu_img {
   width: 100vw;

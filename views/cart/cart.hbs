@@ -1,5 +1,7 @@
+<div class = "cart_container">
+<div id="cart-form">
 {{#if userInSession}}
-  <h2>Welcome to your cart {{userInSession.username}}</h2>
+  <h2>Welcome to your cart, {{userInSession.username}}</h2>
 {{/if}}
 
 {{! form that displays the remove button }}
@@ -12,7 +14,7 @@
     >Price: {{this.productPrice}}</p>
     <input type="hidden" name="productPrice" value="{{this.productPrice}}" /><p
     >Quantity: {{this.quantity}}</p>
-    <button type="submit">Remove</button>
+    <button class="cart_button" type="submit">Remove</button>
   </form>
 {{/each}}
 
@@ -23,6 +25,8 @@
     <input type="hidden" name="productName" value="{{this.productName}}" />
     <input type="hidden" name="productPrice" value="{{this.productPrice}}" />
   {{/each}}
-  <button type="submit">Checkout</button>
+  <button class="cart_button" type="submit">Checkout</button>
 
 </form>
+</div>
+</div>
