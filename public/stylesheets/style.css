@@ -156,7 +156,7 @@ li {
     
   .Submit_button{
     background-color: #850E35;
-    height: 1270px;
+    height: 65px;
     width: 1900px;
     text-align: center;
     color: white;
@@ -168,19 +168,35 @@ li {
 .cart_container
 {
   background-color: #850E35;
-  height: 500px;
+  height: 1500px;
   text-align: center;
   color: white;
+  font-size: 25pt
 }
 .cart_form{
   height: 65px;
   width: 450px;
-  text-align: center;
-  color: white;
+  text-align: center;  
   margin: 10px;
-  font-size: 15pt;
+ 
+}
+#cart-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  padding-left: 8%;
+}
+
+.cart_form p {
+  margin: 0;
+  padding-right: 10px;
+  flex: 1;
+  text-align: center;
 }
 .cart_button{
+  flex: 0 0 auto;
+  margin: 10px;
   height: 65px;
   width: 450px;
   text-align: center;
@@ -191,6 +207,10 @@ li {
   border: 5px solid white;
   font-size: 20pt;
 }
+.checkout_button {
+  margin-top: 20px;
+  width: 1200px;
+}
 
 .Menu_img {
   width: 100vw;
@@ -198,6 +218,7 @@ li {
   justify-content: center;
   align-items: center;
 }
+
 
 .Welcome_img1 {
   position: absolute;
