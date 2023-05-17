@@ -376,6 +376,46 @@ li {
 }
 
 
+/* Payment styles */
+.pay-container{
+  
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pay-container h2{
+  font-size: 4rem;
+}
+.pay-container p{
+  font-size: 3rem;
+}
+
+.pay-container a{
+  text-align: center;
+  /* width: 10rem; */
+  padding: 1rem;
+  color: #ffffffff;
+  font-size: 2rem;
+  text-decoration: none;
+  border: 4px solid white;
+    border-radius: 250px;
+}
+.pay-container a:hover{
+  color: #850E35;
+  background-color: #ffffff;
+}
+
+.pay-background{
+  line-height: 1rem;
+  background-color: #850E35;
+  width: 100vw;
+  height: 52.5rem;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*     --red-color: #850E35
     --white-color: #FFFFFF
