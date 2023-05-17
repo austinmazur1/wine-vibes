@@ -1,19 +1,19 @@
-<h2>Details</h2>
 {{! wine. to access the data }}
-<div>
-  <h3>{{wine.product_name}}</h3>
-  <p>{{wine.product_vibe}}</p>
-  <img src="{{wine.product_image}}" alt="{{wine.product_name}}" />
-  <p>€{{wine.product_price}}</p>
-  <p>{{wine.grape_variety}}</p>
-</div>
+<h3 class="current-vibe">{{wine.product_name}}</h3>
+<div class="details">
+  <div class="main-info">
+    <img src="{{wine.product_image}}" alt="{{wine.product_name}}" />
+    <p>{{wine.product_vibe}}</p>
+    <p>€{{wine.product_price}}</p>
+    <p>{{wine.grape_variety}}</p>
+  </div>
 
-<div>
-  <ul>
-    <h4>Pairs well with:</h4>
-    {{#each wine.pairs_with}}
-      <li> <p>{{this}}</p></li>
-    {{/each}}
-  </ul>
-
+  <div class="additional-info">
+    <ul>
+      <h4>Pairs well with:</h4>
+      {{#each wine.pairs_with}}
+        <li> <p>{{this}}</p></li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

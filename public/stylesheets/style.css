@@ -158,6 +158,23 @@ li {
   border: 5px solid white;
   font-size: 20pt;
 }
+/* Product Details */
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+align-items: flex-start;
+}
+.main-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-info{
+  display: flex;
+  flex-direction: column;
+}
+
 /*vibe-check page*/
 .vibe-check{
   background-image: url(https://i.ibb.co/zx5D4LH/wine-aesthetic.jpg);
