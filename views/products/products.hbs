@@ -1,4 +1,4 @@
-<h2> Vibing with "{{vibe.0.product_vibe}}"</h2>
+<h2 class="current-vibe"> Vibing with "{{vibe.0.product_vibe}}"</h2>
 <div class="col">
   {{#each vibe}}
 
@@ -8,6 +8,7 @@
           src="{{this.product_image}}"
           alt="{{this.product_name}}"
         /></a>
+        <div class="product-details">
       <h2>{{this.product_name}}</h2>
       <p>Origin: {{this.origin}}</p>
       <p>{{this.alcohol_content}}</p>
@@ -16,8 +17,9 @@
         <input type="hidden" name="id" value="{{this._id}}" />
         <button type="submit" id="add-to-cart-button">Add to Cart</button>
       </form>
+      </div>
     </div>
 
   {{/each}}
-
 </div>
+<div class="current-vibe"></div>
