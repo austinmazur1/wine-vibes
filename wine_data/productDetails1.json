@@ -1,0 +1,95 @@
+[{
+    "product_image":"https://i.ibb.co/ZW1G5JD/Bosquet-des-Papes-Chateauneuf-du-Pape-Cuvee-Tradition-Rouge-2020.png",
+    "product_vibe": "Home Alone",
+    "product_name": "Bosquet des Papes: Chateauneuf du Pape Cuvee Tradition Rouge 2020",
+    "product_price": "34,90 €",
+    "bottle_size": "0,75 l",
+    "closure": "Cork",
+    "quality_level": "french quality wine",
+    "origin": "France, Rhone, Chateauneuf du Pape",
+    "alcohol_content": "15.0% Vol.",
+    "residual_sugar": "2 g/l",
+    "acidity": "3 g/l",
+    "recommended_serving_temperature": "16-18 °C",
+    "fermentation": "spontaneous fermentation",
+    "maturation": "barrique cask",
+    "contains_sulfites": true,
+    "description": "Intensely fruity and aromatic, yet elegantly balanced. This wine combines the richness of Burgundy with the charm of southern France. It showcases sweet red cherries, fresh earth, marzipan, and blueberries, delivering a delightful cherry character. With excellent harmony, high maturity, and playful aromatics, it exhibits incredibly fine and velvety tannins.",
+    "pairs_with": ["Game meat", "Grilled lamb", "Roasted duck"],
+    "producer": {
+        "name": "Bosquet des Papes",
+        "location": "Chateauneuf du Pape"
+    }
+},
+{
+  "product_image": "https://i.ibb.co/zxbg0gc/Per-Se-Inseparable-Gualtallary-2019.png",
+  "product_vibe": "Home Alone",
+  "product_name": "PerSe: Inseparable Gualtallary 2019",
+  "product_price": "29,90 €",
+  "bottle_size": "0,75 l",
+  "closure": "Cork",
+  "quality_level": "Argentinian premium wine",
+  "origin": "Argentina, Mendoza, Valle de Uco - Gualtallary",
+  "alcohol_content": "14.5% Vol.",
+  "residual_sugar": "2 g/l",
+  "acidity": "5 g/l",
+  "recommended_serving_temperature": "16 - 18 °C",
+  "fermentation": "Spontaneous fermentation",
+  "maturation": "Aged in used Barrique barrels for 12 months",
+  "contains_sulfites": true,
+  "description": "The PerSe Inseparable Gualtallary 2019 is a highly expressive Malbec sourced from old vines in the Gualtallary subregion of Valle de Uco, Mendoza. Grown at altitudes ranging from 1000 to 1300 meters above sea level, this wine benefits from the extreme cold climate and limestone soils. Made using organic farming practices, the grapes are spontaneously fermented in rolling Barrique barrels for 30 days and then aged for 12 months. This Malbec is immensely flavorful, rich, and generous with a velvety texture. It exhibits notes of ripe black cherry, raspberry, blackberry, cassis, lavender, violets, and licorice. There are hints of pink grapefruit and orange zest adding a touch of exoticism. It also showcases a pronounced stony and saline minerality along with delightful herbal spices. The Inseparable Gualtallary 2019 is a perfect example of exceptional high-altitude Malbec from Argentina. It offers incredible freshness, depth, and a long aging potential. Please note that this wine requires some aeration and bottle aging to fully reveal its complexity and reach its peak. Enjoy it from 2024 to 2037.",
+  "pairs_with": ["Grilled beef steak", "Roasted lamb", "Hard cheeses"],
+  "producer": {
+    "name": "PerSe",
+    "location": "Mendoza, Argentina"
+  }
+},
+{
+    "product_image": "https://i.ibb.co/ZH3mt1g/Can-Rafols-dels-Caus-Montombra-Viognier-Parellada-2019.png",
+    "product_vibe": "Home Alone",
+    "product_name": "Can Rafols dels Caus: Montombra Viognier Parellada 2019",
+    "product_price": "55,00 €",
+    "bottle_size": "0,75 l",
+    "closure": "Cork",
+    "quality_level": "Fine Wine",
+    "origin": "Spain, Penedes",
+    "alcohol_content": "12.5% Vol.",
+    "residual_sugar": "9 g/l",
+    "acidity": "5 g/l",
+    "recommended_serving_temperature": "8-10 °C",
+    "fermentation": "Standard fermentation",
+    "maturation": "Aged in oak barrels",
+    "contains_sulfites": true,
+    "description": "This wine offers a mineral-driven character with fresh acidity and  a fruit-forward profile. The aromas are delicate, featuring white peach, lemon zest, green almond, thyme, and beeswax. On the palate, it is crisp and vibrant, displayingflavors of ripe lemon, yellow apple, and tangy Kumquat. The wine exhibits a subtle spiciness and a textured mouthfeel. ",
+    "pairs_with": ["Grilled seafood", "Roasted chicken", "Creamy cheeses"],
+    "producer": {
+      "name": "Can Rafols dels Caus",
+      "location": "Penedes, Spain"
+    }
+  },
+  {
+    "product_image": "https://i.ibb.co/1dG3f50/Alexander-Laible-Riesling-CHARA-2017.jpg",
+    "product_vibe": "Home Alone",
+    "product_name": "Alexander Laible: Riesling Chara *** 2022",
+    "product_price": "14,50 €",
+    "bottle_size": "0,75 l",
+    "closure": "screw cap",
+    "quality_level": "German quality wine",
+    "origin": "Deutschland, Baden",
+    "alcohol_content": "12.5% Vol.",
+    "residual_sugar": "9 g/l",
+    "acidity": "3 g/l",
+    "recommended_serving_temperature": "8-10 °C",
+    "fermentation": "spontaneous fermentation",
+    "maturation": "stainless steel tank",
+    "contains_sulfites": true,
+    "description": "Chara is Greek for 'joy,' paying homage to the evangelical church that ensured the Laible family's survival in the difficult early years. The wine is grown on marl soil, which is weathered rock with limestone inclusions, gravel, sand, and granite. The wine exhibits a sense of ambition and density without being heavy or fatty. Alexander's vineyards are located in cool sites in the Ortenau region, mainly in Sinsheim. These are cooler, windy high-altitude locations. Alexander believes that these vineyards will withstand climate change for at least another 20 years and continue to produce cool, juicy, and fine Rieslings. The Chara was the first wine from Alex Laible that started to move towards greatness, with a sublime, polished, and elegant character. The nose is not only grapey like the entry-level wines but also offers plenty of yellow pear and juicy apple, with a hint of shell limestone and some lemon grass and salt. On the palate, it attacks all taste buds with incredible force, more than expected. It has tremendous drive and freshness, extremely playful, simultaneously tension-filled and salty. This Riesling exhibits crisp yellow fruit, peach, green pear, wild fennel, and minty notes that make the mouth water. The juiciness is rarely as pronounced; it almost approaches the slushy style of Deidesheim until the minerality takes control again. This is not an easygoing, cuddly wine; it requires some contemplation. With its density and power, it pairs well with food but still offers tremendous enjoyment. The wines of Alex Laible are known for being incredibly juicy and quaffable. ",
+    "pairs_with": ["Grilled seafood","Asian Cuisine","Goat Cheese Salad"],
+    "producer": {
+      "name": "Alexander Laible",
+      "location": "Baden, Deutschland"
+    }
+  }
+  ]
+    
+    
