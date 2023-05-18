@@ -59,7 +59,7 @@ router.post("/checkout", isLoggedIn, async (req, res, next) => {
       line_items: lineItems,
       mode: "payment",
       // success_url: `${process.env.SERVER_URL}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      success_url: `${process.env.SERVER_URL}/checkout/success`,
+      success_url: `${process.env.SERVER_URL}/checkout/success`, //changed in deployment
       cancel_url: `${process.env.SERVER_URL}/cart`,
     });
 

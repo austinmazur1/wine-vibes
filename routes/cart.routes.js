@@ -7,7 +7,7 @@ const Product = require("../models/Wine.model");
 
 //middle page route
 router.get("/add-item/:id", (req, res, next) => {
-  res.render("cart/add-item");
+  res.render("cart/add-item", {showNav: true});
 });
 
 //handles when user adds items to the cart
@@ -80,11 +80,12 @@ router.get("/", async (req, res, next) => {
   //if no cart, render an "empty cart" page, link to homepage
   //else if, render their cart, send user and cart to access data in hbs
   if (!userCart || userCart.items.length < 1) {
-    res.render("cart/empty-cart");
+    res.render("cart/empty-cart", {showNav: true});
   } else {
     res.render("cart/cart", {
       userInSession: req.session.currentUser,
       userCart,
+      showNav: true
     });
   }
 });

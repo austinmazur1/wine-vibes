@@ -15,7 +15,7 @@ const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/signup", isLoggedOut, (req, res) => {
-  res.render("auth/signup");
+  res.render("auth/signup", {showNav: true});
 });
 
 //took out , isLoggedOut
@@ -67,7 +67,7 @@ router.post("/signup", isLoggedOut, async (req, res) => {
     const userId = userFromDB._id;
     console.log(userId);
 
-    //redirect to the homepage or their profile?
+
     res.redirect("/home");
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
@@ -85,7 +85,7 @@ router.post("/signup", isLoggedOut, async (req, res) => {
 
 // GET /auth/login
 router.get("/login", isLoggedOut, (req, res) => {
-  res.render("auth/login", { userInSession: req.session.currentUser });
+  res.render("auth/login", { userInSession: req.session.currentUser, showNav: true });
 });
 
 // POST /auth/login
@@ -148,6 +148,6 @@ router.get("/logout", isLoggedIn, (req, res) => {
 
 //id is the req.session.currentUser._id
 router.get("/profile/:id", async (req, res, next) => {
-  res.render("auth/profile", { userInSession: req.session.currentUser });
+  res.render("auth/profile", { userInSession: req.session.currentUser, showNav: true });
 });
 module.exports = router;
