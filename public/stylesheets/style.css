@@ -265,6 +265,30 @@ align-items: flex-start;
   margin-top: 20px;
   width: 1200px;
 }
+/*empty cart*/
+.wine_o_clock{
+  height: 45%;
+  width: 55%;
+}
+.empty_cart{
+  text-align: center; 
+  font-size: 35pt;
+  font-family: 'Rubik';
+  font-weight: bold;
+}
+.vibe-check-link{
+  text-decoration: none;
+  color: #850E35;
+}
+/*profile*/
+.profile{
+  font-size: 40pt;
+  font-family: 'Rubik'
+}
+.profile1{
+  font-size: 30pt;
+  font-family: 'Rubik'
+}
 
 .Menu_img {
   /* width: 100vw; */
