@@ -58,12 +58,15 @@
     </li>
 
     {{#unless userInSession}}
+    <div class="register">
+
     <li class="nav-item">
       <a class="nav-link" href="/auth/login">Login</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/auth/signup">Signup</a>
     </li>
+    </div>
     {{/unless}}
 
     {{#if userInSession}}
