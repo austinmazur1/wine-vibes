@@ -1,15 +1,17 @@
 <div class = "cart_container">
 
-  <br><br>
+  <br>
 {{#if userInSession}}
   <h2>Welcome to your cart, {{userInSession.username}}</h2><br>
 {{/if}}
+
+</div>
 <div id="cart-form">
 {{! form that displays the remove button }}
 {{#each userCart.items}}
   <form action="/cart/{{this.productId}}" method="post">
     <input type="hidden" name="_method" value="DELETE" />
-    <input type="hidden" name="productId" value="{{this.productId}}" /><p>Name:
+    <input type="hidden" name="productId" value="{{this.productId}}" /><p class="product_name">
       {{this.productName}}</p>
     <input type="hidden" name="productName" value="{{this.productName}}" /><p
     >Price: {{this.productPrice}}</p>
@@ -18,7 +20,7 @@
     <button class="cart_button" type="submit">Remove</button>
   </form>
 {{/each}}
-
+</div>
 {{! Sends the product data via req.body to the checkout route }}
 <form action="/checkout" method="POST">
   {{#each userCart.items}}
@@ -26,9 +28,7 @@
     <input type="hidden" name="productName" value="{{this.productName}}" />
     <input type="hidden" name="productPrice" value="{{this.productPrice}}" />
   {{/each}}
-  </div>
+  
   <button class="cart_button checkout_button" type="submit">Checkout</button>
 
 </form>
-
-</div>

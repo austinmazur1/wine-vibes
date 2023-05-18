@@ -222,7 +222,7 @@ align-items: flex-start;
 .cart_container
 {
   background-color: #850E35;
-  height: 1500px;
+  height: 190px;
   text-align: center;
   color: white;
   font-size: 25pt
@@ -232,21 +232,23 @@ align-items: flex-start;
   width: 450px;
   text-align: center;  
   margin: 10px;
+  font-size: 15pt;
+  font-family: 'Rubik';
+  font-weight: bold;
+  
  
 }
+
 #cart-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content:center;
+  align-items: center;
+  text-align: center; 
+  font-weight: bold;
+  font-family: 'Rubik';
   
-  padding-left: 8%;
-}
-
-.cart_form p {
-  margin: 0;
-  padding-right: 10px;
-  flex: 1;
-  text-align: center;
+ 
 }
 .cart_button{
   flex: 0 0 auto;
@@ -264,6 +266,16 @@ align-items: flex-start;
 .checkout_button {
   margin-top: 20px;
   width: 1200px;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .cart_button {
+    width: 300px;
+  }
+  
+  .checkout_button {
+    width: 95%;
+  }
 }
 /*empty cart*/
 .wine_o_clock{
