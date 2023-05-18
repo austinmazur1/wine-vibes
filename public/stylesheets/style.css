@@ -83,8 +83,100 @@ li {
 /* .col {
   margin-left:20%; 
 } */
+.welcome_image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
+.welcome_text_image {
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+  margin-top: -4%;
+  margin-left: -15%;
+}
+
+.welcome_to_page_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.first_line{
+  font-size: 45px;
   
+}
+
+.welcome_to_page_text {
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+  line-height: 1.5;
+}
+.left_content {
+  width: 30%;
+  text-align: left;
+}
+
+.right_content {
+  width: 70%;
+  text-align: center;
+}
+
+
+.Welcome {
+  position: absolute;
+  top: 20px;
+  left: 800px;
+  z-index: 2;
+}
+
+.Welcome_text {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  margin-top: 170px;
+  margin-right: 50px;
+  margin-left: 800px;
+  position: absolute;
+  z-index: 1;
+}
+.welcome-container{
+  font-family: 'Rubik', sans-serif;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.WineVibes{
+  font-family: 'Rubik', sans-serif;
+  color:darkred;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .vibeImage,
+  .wineImage {
+    width: 100%;
+    height: auto;
+  }
+  .Menu_img{
+    height: 300px;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .welcome_text_image {
+    display: none;
+  }
+  .Welcome_text {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
 
 .col {
   margin-top: 6rem;
@@ -312,42 +404,7 @@ align-items: flex-start;
   /* align-items: center; */
 }
 
-
-.Welcome_img1 {
-  position: absolute;
-  height: 520px;
-  top: -30px;
-  left: 320px;
-  z-index: 2;
-}
-
-.Welcome {
-  position: absolute;
-  top: 20px;
-  left: 800;
-  z-index: 2;
-}
-
-.Welcome_text {
-  font-family: 'Rubik', sans-serif;
-  font-size: 18px;
-  margin-top: 170px;
-  margin-right: 300px;
-  margin-left: 800px;
-  position: relative;
-  z-index: 1;
-}
-.welcome-container{
-  font-family: 'Rubik', sans-serif;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.WineVibes{
-  font-family: 'Rubik', sans-serif;
-  color:darkred;
-}
+/*choose the vibe*/
 
 .ChooseVibe{
   font-family: 'Rubik', sans-serif;
@@ -504,6 +561,20 @@ align-items: flex-start;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  .pay-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .pay-container p {
+    font-size: 2rem;
+  }
+
+  .pay-container a {
+    font-size: 1.5rem;
+  }
 }
 
 /*     --red-color: #850E35
