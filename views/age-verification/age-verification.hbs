@@ -4,11 +4,13 @@
     <title>Age Verification</title>
   </head>
   <body>
+    <div class = "login_container">
+      <div id="login-form">
     {{#if over18}}
       <h1>Welcome to the Homepage!</h1>
       
     {{else}}
-      <h1>Are you over 18 years old?</h1>
+      <br><br><br><h1>Are you over 18 years old?</h1><br><br>
       <form method="post" action="/">
         <label>
           <input type="radio" name="age" value="yes" />
@@ -18,12 +20,14 @@
           <input type="radio" name="age" value="no" />
           No
         </label>
-        <br />
-        <button type="submit">Submit</button>
+        <br /><br>
+        <button class="cart_button" type="submit">Submit</button>
       </form>
     {{/if}}
     {{#if error}}
       <p>{{this.error}}</p>
     {{/if}}
   </body>
+  </div>
+  </div>
 </html>

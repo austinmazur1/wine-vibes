@@ -268,7 +268,7 @@ align-items: flex-start;
 }
 
 /*vibe-check page*/
-.vibe-check{
+.vibe-check {
   background-image: url(https://i.ibb.co/zx5D4LH/wine-aesthetic.jpg);
   object-fit: contain;
   background-repeat: no-repeat;
@@ -279,37 +279,77 @@ align-items: flex-start;
   color: white;
   font-size: 95pt;
   text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2px 2px black;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.col1 {
+  background-color: #850E35;
+  height: 270px;
+  flex-basis: 100%;
+  text-align: center;
+  color: white;
+  font-size: 35pt;
+  border: 20px solid white;
+}
+
+.col2 {
+  background-color: #F092B3;
+  height: 270px;
+  flex-basis: 100%;
+  text-align: center;
+  color: white;
+  font-size: 35pt;
+  border: 20px solid white;
+}
+
+
+.Submit_button {
+  background-color: #850E35;
+  height: 165px;
+  width: 100%;
+  max-width: 1900px;
+  text-align: center;
+  color: white;
+  font-size: 55pt;
+  border: 20px solid white;
+  border-radius: 250px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .vibe-check {
+    font-size: 45pt;
   }
-  .col1{    
-    background-color: #850E35;
-    height: 270px;
-    width: 1850px;
-    text-align: center;
-    color: white;
-    font-size: 35pt;
-    border: 20px solid white;
-    
+
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
   }
-  .col2{    
-    background-color: #F092B3;
-    height: 270px;
-    width: 1850px;
-    text-align: center;
-    color: white;
-    font-size: 35pt;
-    border: 20px solid white;
+
+  .col1,
+  .col2 {
+    flex-basis: 100%;
+    max-width: 100%;
+    height: auto;
+    font-size: 15pt;
   }
-    
-  .Submit_button{
-    background-color: #850E35;
-    height: 65px;
-    width: 1900px;
-    text-align: center;
-    color: white;
-    font-size: 55pt;
-    border: 20px solid white;
-    border-radius: 250px;
+
+  .Submit_button {
+    min-width: 100%;
+    font-size: 15pt;
   }
+}
+
+
   /*cart page, */
 .cart_container
 {
@@ -358,6 +398,7 @@ align-items: flex-start;
 .checkout_button {
   margin-top: 20px;
   width: 1200px;
+  align-items: center;
 }
 /* Media Queries */
 @media (max-width: 768px) {
@@ -366,8 +407,7 @@ align-items: flex-start;
   }
   
   .checkout_button {
-    width: 95%;
-  }
+    width: 100%;
 }
 /*empty cart*/
 .wine_o_clock{

@@ -20,7 +20,7 @@
     <button class="cart_button" type="submit">Remove</button>
   </form>
 {{/each}}
-</div>
+
 {{! Sends the product data via req.body to the checkout route }}
 <form action="/checkout" method="POST">
   {{#each userCart.items}}
@@ -30,5 +30,5 @@
   {{/each}}
   
   <button class="cart_button checkout_button" type="submit">Checkout</button>
-
+</div>
 </form>
