@@ -37,3 +37,4 @@ Handlebars.registerHelper('eq', function(a, b) {
 hbs.registerHelper('pageWithNoNav', function(path, options) {
   return options.data.root.currentPage !== '/';
 })
+
