@@ -7,21 +7,22 @@ const { isNotOfAge} = require("../middleware/isOfAge");
 //Got products from db, did a loop to send the vibes to the homepage
 router.get("/home",  async (req, res) => {
   try {
-    const vibe = await Wine.find();
+    // const vibe = await Wine.find();
 
-    //calls imported function that retrieves seperated vibe arrays
-    const vibes = await vibeArrays();
-    const summerVibe = vibes.summerParty;
-    const home = vibes.homeAlone;
-    const meAndFriends = vibes.meAndSomeFriends;
-    const hotGirlSum = vibes.hotGirlSummer;
+    // //calls imported function that retrieves seperated vibe arrays
+    // const vibes = await vibeArrays();
+    // const summerVibe = vibes.summerParty;
+    // const home = vibes.homeAlone;
+    // const meAndFriends = vibes.meAndSomeFriends;
+    // const hotGirlSum = vibes.hotGirlSummer;
 
     res.render("homepage/homepage", {
-      vibes: vibes.productVibes,
-      home,
-      summerVibe,
-      meAndFriends,
-      hotGirlSum,
+      showNav: true,
+      // vibes: vibes.productVibes,
+      // home,
+      // summerVibe,
+      // meAndFriends,
+      // hotGirlSum,
       userInSession: req.session.currentUser,
     });
   } catch (err) {
@@ -37,6 +38,7 @@ router.get("/summer-party", async (req, res, next) => {
     res.render("products/products", {
       userInSession: req.session.currentUser,
       vibe: summerVibe,
+      showNav: true
     });
   } catch (error) {
     next(error);
@@ -49,6 +51,7 @@ router.get("/home-alone", async (req, res, next) => {
     res.render("products/products", {
       userInSession: req.session.currentUser,
       vibe: homeAlone,
+      showNav: true
     });
   } catch (error) {
     next(error);
@@ -62,6 +65,7 @@ router.get("/me-and-friends", async (req, res, next) => {
     res.render("products/products", {
       userInSession: req.session.currentUser,
       vibe: meAndFriends,
+      showNav: true
     });
   } catch (error) {
     next(error);
@@ -74,6 +78,7 @@ router.get("/hot-girl-summer", async (req, res, next) => {
     res.render("products/products", {
       userInSession: req.session.currentUser,
       vibe: hotGirlSum,
+      showNav: true
     });
   } catch (error) {
     next(error);
@@ -84,7 +89,7 @@ router.get("/details/:id", async (req, res, next) => {
   try {
     const wineId = req.params.id;
     const details = await Wine.findById(wineId);
-    res.render("products/details", { wine: details });
+    res.render("products/details", { wine: details, showNav: true });
   } catch (error) {
     next(error);
   }
