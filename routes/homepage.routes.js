@@ -3,9 +3,11 @@ const router = express.Router();
 const Wine = require("../models/Wine.model");
 const { vibeArrays } = require("../utils/vibes");
 const { isNotOfAge} = require("../middleware/isOfAge");
+const { getWine } = require("../public/js/helpers");
+
 
 //Got products from db, did a loop to send the vibes to the homepage
-router.get("/home",  async (req, res) => {
+router.get("/home", isNotOfAge, async (req, res) => {
   try {
     // const vibe = await Wine.find();
 
