@@ -68,14 +68,18 @@
     </li>
     </div>
     {{/unless}}
-
+    
     {{#if userInSession}}
+    
+    <div class="register">
     <li class="nav-item">
       <a class="nav-link" href="/auth/profile/{{userInSession._id}}">Profile</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/auth/logout">Logout</a>
     </li>
+    </div>
     {{/if}}
+    
   </ul>
 </nav>

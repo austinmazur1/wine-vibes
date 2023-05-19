@@ -40,7 +40,7 @@ h1 {
 
 .nav-link {
   text-decoration: none;
-  font-family: 'Rubik';
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 25px;
   color: #850E35;
@@ -70,15 +70,8 @@ h1 {
   gap: 35px;
 }
 
-.nav-item{
-  margin-left: 10px;
-}
 
-.register{
-  width: 20%;
-  display: flex;
-  gap: 35px;
-}
+
 
 /*Homepage*/
 ul {
@@ -460,6 +453,7 @@ color: #dddcdc;
   font-size: 25pt
 }
 .cart_form{
+  font-family: 'Rubik', sans-serif;
   height: 65px;
   width: 450px;
   text-align: center;  
@@ -521,17 +515,19 @@ color: #dddcdc;
   font-weight: bold;
 }
 .vibe-check-link{
+  font-family: 'Rubik', sans-serif;
   text-decoration: none;
   color: #850E35;
 }
 /*profile*/
 .profile{
+  font-family: 'Rubik', sans-serif;
   font-size: 40pt;
-  font-family: 'Rubik'
+  
 }
 .profile1{
   font-size: 30pt;
-  font-family: 'Rubik'
+  font-family: 'Rubik', sans-serif;
 }
 
 .Menu_img {
@@ -664,7 +660,7 @@ color: #dddcdc;
 
 /* Payment styles */
 .pay-container{
-  
+  font-family: 'Rubik', sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -686,6 +682,7 @@ color: #dddcdc;
   text-decoration: none;
   border: 4px solid white;
     border-radius: 250px;
+    font-family: 'Rubik', sans-serif;
 }
 .pay-container a:hover, .cart_button:hover, .login_button:hover, .Submit_button:hover{
   color: #850E35;
@@ -719,6 +716,17 @@ color: #dddcdc;
   }
 }
 
+.current-vibe{
+  font-family: 'Rubik', sans-serif;
+}
+
+.product-details{
+  font-family: 'Rubik', sans-serif;
+}
+
+.main-info{
+  font-family: 'Rubik', sans-serif;
+}
 /*     --red-color: #850E35
     --white-color: #FFFFFF
     --black-color: #000000 /
