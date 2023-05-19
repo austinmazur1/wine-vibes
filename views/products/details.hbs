@@ -1,33 +1,66 @@
 {{! wine. to access the data }}
 <h3 class="current-vibe">{{wine.product_name}}</h3>
 <div class="details">
-  <div class="main-info">
+  <div class="detail-photo">
     <img src="{{wine.product_image}}" alt="{{wine.product_name}}" />
-    <p>{{wine.product_vibe}}</p>
-    <p>€{{wine.product_price}}</p>
-    <p>{{wine.grape_variety}}</p>
-    <p>{{wine.alcohol_content}}</p>
   </div>
-  <div>
-    <p>{{wine.description}}</p>
-    <p>{{wine.origin}}</p>
-  </div>
-  <div>
-    <p>{{wine.fermentation}}</p>
-    <p>{{wine.maturation}}</p>
-    <p>{{wine.residual_sugar}}</p>
-  </div>
+  <div class="main-info">
+    <div class="main-and-description">
+      <div class="details-main">
+        <p>{{wine.product_vibe}}</p>
+        <p>€{{wine.product_price}}</p>
+        <p>{{wine.alcohol_content}}</p>
+      </div>
 
-  <div>
-    <p>{{wine.recommended_serving_temperature}}</p>
-  </div>
+      <div class="description-origin">
+        <p>Origin: {{wine.origin}}</p>
+        <p>{{wine.description}}</p>
+      </div>
 
-  <div class="additional-info">
-    <ul>
-      <h4>Pairs well with:</h4>
-      {{#each wine.pairs_with}}
-        <li> <p>{{this}}</p></li>
-      {{/each}}
-    </ul>
+      <div class="more-info">
+        <ul>
+          <div class="bottle-info">
+        <h3>Bottle Info</h3>
+        {{#if wine.vintage}}
+          <li><p>{{wine.vintage}}</p></li>
+          {{/if}}
+          <li><p>Bottle Size: {{wine.bottle_size}}</p></li>
+          <li><p>Bottle Closure: {{wine.closure}}</p></li>
+          <li><p>{{wine.quality_level}}</p></li>
+          </div>
+          <div class="producer">
+          <h3>Producer</h3>
+          {{#each wine.producer}}
+          <li><p>{{this}}</p></li>
+          {{/each}}
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <div class="secondary-container">
+      <div class="secondary-info">
+        <ul>
+          <h3>Fermentation</h3>
+          <li> <p>{{wine.fermentation}}</p> </li>
+          <h3>Maturation</h3>
+          <li> <p>{{wine.maturation}}</p> </li>
+          <h3>Residual Sugar</h3>
+          <li><p>{{wine.residual_sugar}}</p></li>
+          <h3>Recommended Serving Temp</h3>
+          <li><p>{{wine.recommended_serving_temperature}}</p></li>
+        </ul>
+      </div>
+
+      <div class="tertiary-info">
+        <ul>
+          <h3>Pairs with</h3>
+          {{#each wine.pairs_with}}
+            <li> <p>{{this}}</p></li>
+          {{/each}}
+        </ul>
+      </div>
+      
+    </div>
   </div>
 </div>
