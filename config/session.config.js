@@ -30,7 +30,7 @@ module.exports = (app) => {
         httpOnly: true,
         // maxAge: 24 * 60 * 60 * 1000 //24 hours
         // maxAge: 60000 //1 minute
-        maxAge: 300000 //5 minutes
+        maxAge: 600000 //10 minutes
         
                 // maxAge: 60000,
       },
