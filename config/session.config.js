@@ -12,7 +12,6 @@ module.exports = (app) => {
   // but will become a real "app" in the app.js
   // when this file gets imported/required there
  
-  // required for the app when deployed to Heroku (in production)
 
   //create SESS_SECRET va in .env file
 
@@ -30,7 +29,8 @@ module.exports = (app) => {
         secure: process.env.NODE_ENV === "production",
         httpOnly: true,
         // maxAge: 24 * 60 * 60 * 1000 //24 hours
-        maxAge: 60000 //1 minute
+        // maxAge: 60000 //1 minute
+        maxAge: 300000 //5 minutes
         
                 // maxAge: 60000,
       },
